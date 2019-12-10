@@ -1366,15 +1366,15 @@ Other Style Guides
     ```
 
   <a name="modules--prefer-default-export"></a>
-  - [10.6](#modules--prefer-default-export) In modules with a single export, prefer default export over named export.
+  - [10.6](#modules--prefer-default-export) It's OK to use named export even if there's only one export.
  eslint: [`import/prefer-default-export`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md)
-    > Why? To encourage more files that only ever export one thing, which is better for readability and maintainability.
+    > Why? Named export make the import symbol name explicit so that it's easier to search. It also reduce the friction of adding new exports (when needed) later.
 
     ```javascript
-    // bad
+    // good
     export function foo() {}
 
-    // good
+    // it's OK
     export default function foo() {}
     ```
 

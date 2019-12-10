@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-chotot",
-  "version": "18.0.1",
+  "version": "18.0.1-beta.0",
   "description": "Chotot's ESLint config, following our styleguide",
   "main": "index.js",
   "scripts": {
@@ -51,7 +51,7 @@
   },
   "homepage": "https://github.com/chototoss/chotot-web-standards",
   "dependencies": {
-    "eslint-config-chotot-base": "file:../eslint-config-chotot-base",
+    "eslint-config-chotot-base": "^14.0.0",
     "object.assign": "^4.1.0",
     "object.entries": "^1.1.0"
   },
@@ -60,7 +60,7 @@
     "babel-preset-airbnb": "^4.1.0",
     "babel-tape-runner": "^3.0.0",
     "eclint": "^2.8.1",
-    "eslint": "^5.16.0 || ^6.1.0",
+    "eslint": "^5.16.0 || ^6.7.0",
     "eslint-find-rules": "^3.4.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
@@ -72,7 +72,7 @@
     "tape": "^4.11.0"
   },
   "peerDependencies": {
-    "eslint": "^5.16.0 || ^6.1.0",
+    "eslint": "^5.16.0 || ^6.7.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.15.1",

@@ -60,9 +60,17 @@ module.exports = {
     // https://eslint.org/docs/rules/no-case-declarations.html
     'no-case-declarations': 'error',
 
+    // disallow returning value in constructor
+    // https://eslint.org/docs/rules/no-constructor-return
+    'no-constructor-return': 'error',
+
     // disallow division operators explicitly at beginning of regular expression
     // https://eslint.org/docs/rules/no-div-regex
     'no-div-regex': 'off',
+
+    // disallow duplicate conditions in if-else-if chains
+    // https://eslint.org/docs/rules/no-dupe-else-if
+    'no-dupe-else-if': 'error',
 
     // disallow else after a return in an if
     // https://eslint.org/docs/rules/no-else-return
@@ -262,6 +270,10 @@ module.exports = {
     // disallow use of comma operator
     'no-sequences': 'error',
 
+    // disallow returning values from setters
+    // https://eslint.org/docs/rules/no-setter-return
+    'no-setter-return': 'error',
+
     // restrict what can be thrown as an exception
     'no-throw-literal': 'error',
 
@@ -340,6 +352,6 @@ module.exports = {
     'wrap-iife': ['error', 'outside', { functionPrototypeMethods: false }],
 
     // require or disallow Yoda conditions
-    yoda: 'error'
+    yoda: 'error',
   }
 };
