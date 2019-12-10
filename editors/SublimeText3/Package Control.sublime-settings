@@ -1,0 +1,32 @@
+{
+	"bootstrapped": true,
+	"installed_packages":
+	[
+		"All Autocomplete",
+		"AutoFileName",
+		"BracketHighlighter",
+		"CSS Extended Completions",
+		"EditorConfig",
+		"Emmet",
+		"FuzzyFilePath",
+		"GitGutter",
+		"GraphQL",
+		"JSCustom",
+		"JsPrettier",
+		"LESS",
+		"Package Control",
+		"Pretty JSON",
+		"React ES6 Snippets",
+		"Sass",
+		"Select Quoted",
+		"SublimeLinter",
+		"SublimeLinter-annotations",
+		"SublimeLinter-contrib-yamllint",
+		"SublimeLinter-eslint",
+		"SublimeLinter-json",
+		"SublimeLinter-stylelint",
+		"Terminal",
+		"TodoReview",
+		"TypeScript",
+	]
+}

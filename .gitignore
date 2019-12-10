@@ -1,0 +1,24 @@
+# gitignore
+
+# Node.js
+node_modules
+
+# Only apps should have lockfiles
+yarn.lock
+package-lock.json
+
+# SublimeText
+# workspace files are user-specific
+*.sublime-workspace
+
+# IntelliJ & WebStorm
+.idea/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

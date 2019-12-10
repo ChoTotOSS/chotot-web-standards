@@ -1,0 +1,33 @@
+{
+	"debug": false,
+	//"prettier_cli_path": "/usr/local/bin/prettier_d",
+	"node_path": "",
+	"auto_format_on_save": true,
+	"auto_format_on_save_excludes": [
+    "*/node_modules/*", "*.yml", "*.json", "*.html", "*.hbs", "*.css", "*.md"
+  ],
+	"auto_format_on_save_requires_prettier_config": true,
+	"allow_inline_formatting": true,
+	"custom_file_extensions": ["svelte"],
+	"max_file_size_limit": -1,
+	"disable_tab_width_auto_detection": false,
+	"disable_prettier_cursor_offset": true,
+	"additional_cli_args": {
+		"--config-precedence": "file-override",
+	},
+	"prettier_options": {
+		"printWidth": 100,
+		"tabWidth": 2,
+		"singleQuote": true,
+		"trailingComma": "es5",
+		"bracketSpacing": true,
+		"jsxBracketSameLine": false,
+		"parser": "babel",
+		"semi": true,
+		"requirePragma": false,
+		"proseWrap": "preserve",
+		"arrowParens": "avoid",
+		"htmlWhitespaceSensitivity": "css",
+		"quoteProps": "as-needed"
+	}
+}

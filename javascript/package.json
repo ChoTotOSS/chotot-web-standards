@@ -1,0 +1,45 @@
+{
+  "name": "chotot-style",
+  "version": "1.0.0",
+  "description": "A mostly reasonable approach to JavaScript.",
+  "scripts": {
+    "preinstall": "npm run install:config && npm run install:config:base",
+    "install:config": "cd packages/eslint-config-chotot && npm prune && npm install",
+    "install:config:base": "cd packages/eslint-config-chotot-base && npm prune && npm install",
+    "lint": "markdownlint --config linters/.markdownlint.json README.md */README.md",
+    "pretest": "npm run --silent lint",
+    "test": "npm run --silent test:config && npm run --silent test:config:base",
+    "test:config": "cd packages/eslint-config-chotot; npm test",
+    "test:config:base": "cd packages/eslint-config-chotot-base; npm test",
+    "pretravis": "npm run --silent lint",
+    "travis": "npm run --silent travis:config && npm run --silent travis:config:base",
+    "travis:config": "cd packages/eslint-config-chotot; npm run travis",
+    "travis:config:base": "cd packages/eslint-config-chotot-base; npm run travis"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chototoss/chotot-web-standards.git"
+  },
+  "keywords": [
+    "style guide",
+    "lint",
+    "airbnb",
+    "chotot",
+    "es6",
+    "es2015",
+    "es2016",
+    "es2017",
+    "es2018",
+    "react",
+    "jsx"
+  ],
+  "author": "Thanh Tran <thanhtran@chotot.vn> (https://twitter.com/trongthanh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chototoss/chotot-web-standards/issues"
+  },
+  "homepage": "https://github.com/chototoss/chotot-web-standards",
+  "devDependencies": {
+    "markdownlint-cli": "^0.13.0"
+  }
+}
