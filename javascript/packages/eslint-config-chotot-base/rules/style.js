@@ -76,14 +76,15 @@ module.exports = {
     'yield-star-spacing': 'off',
     // END Prettier conflict style rules
 
-    // disallow dangling underscores in identifiers
+    // DISABLE: disallow dangling underscores in identifiers
     // https://eslint.org/docs/rules/no-underscore-dangle
-    'no-underscore-dangle': ['error', {
+    'no-underscore-dangle': ['off', {
       allow: [],
       allowAfterThis: false,
       allowAfterSuper: false,
       enforceInMethodNames: true,
     }],
+
     // require camel case names
     camelcase: ['error', { properties: 'never', ignoreDestructuring: false }],
 
@@ -159,9 +160,9 @@ module.exports = {
     // specify the maximum depth that blocks can be nested
     'max-depth': ['off', 4],
 
-    // specify the maximum length of a line in your program
+    // DISABLE: specify the maximum length of a line in your program
     // https://eslint.org/docs/rules/max-len
-    'max-len': ['error', 100, 2, {
+    'max-len': ['off', 100, 2, {
       ignoreUrls: true,
       ignoreComments: false,
       ignoreRegExpLiterals: true,
@@ -231,9 +232,9 @@ module.exports = {
     // disallow comments inline after code
     'no-inline-comments': 'off',
 
-    // disallow if as the only statement in an else block
+    // DISABLE: disallow if as the only statement in an else block
     // https://eslint.org/docs/rules/no-lonely-if
-    'no-lonely-if': 'error',
+    'no-lonely-if': 'off',
 
     // disallow un-paren'd mixes of different operators
     // https://eslint.org/docs/rules/no-mixed-operators
@@ -268,22 +269,27 @@ module.exports = {
     // disallow use of the Object constructor
     'no-new-object': 'error',
 
-    // disallow use of unary operators, ++ and --
+    // DISABLE: disallow use of unary operators, ++ and --
     // https://eslint.org/docs/rules/no-plusplus
-    'no-plusplus': 'error',
+    'no-plusplus': 'off',
 
     // disallow certain syntax forms
     // https://eslint.org/docs/rules/no-restricted-syntax
     'no-restricted-syntax': [
       'error',
-      {
-        selector: 'ForInStatement',
-        message: 'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.',
-      },
-      {
-        selector: 'ForOfStatement',
-        message: 'iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations.',
-      },
+      // RELAX:
+      // {
+      //   selector: 'ForInStatement',
+      //   message: 'for..in loops iterate over the entire prototype chain, ' +
+      //   'which is virtually never what you want. Use Object.{keys,values,entries}, ' +
+      //   'and iterate over the resulting array.',
+      // },
+      // {
+      //   selector: 'ForOfStatement',
+      //   message: 'iterators/generators require regenerator-runtime, ' +
+      //   'which is too heavyweight for this guide to allow them. ' +
+      //   'Separately, loops should be avoided in favor of array iterations.',
+      // },
       {
         selector: 'LabeledStatement',
         message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
@@ -303,13 +309,13 @@ module.exports = {
     // disallow the use of ternary operators
     'no-ternary': 'off',
 
-    // disallow the use of Boolean literals in conditional expressions
+    // DISABLE: disallow the use of Boolean literals in conditional expressions
     // also, prefer `a || b` over `a ? a : b`
     // https://eslint.org/docs/rules/no-unneeded-ternary
-    'no-unneeded-ternary': ['error', { defaultAssignment: false }],
+    'no-unneeded-ternary': 'off', // ['error', { defaultAssignment: false }],
 
-    // allow just one var statement per function
-    'one-var': ['error', 'never'],
+    // DISABLE: allow just one var statement per function
+    'one-var': 'off',
 
     // Require or disallow padding lines between statements
     // https://eslint.org/docs/rules/padding-line-between-statements

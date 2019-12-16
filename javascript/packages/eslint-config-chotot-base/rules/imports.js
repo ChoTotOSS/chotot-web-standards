@@ -40,7 +40,7 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md#when-not-to-use-it
     'import/named': 'error',
 
-    // ensure default import coupled with default export
+    // DISABLE: ensure default import coupled with default export
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md#when-not-to-use-it
     'import/default': 'off',
 
@@ -90,7 +90,12 @@ module.exports = {
         '**/Gruntfile{,.js}', // grunt config
         '**/protractor.conf.js', // protractor config
         '**/protractor.conf.*.js', // protractor config
-        '**/karma.conf.js' // karma config
+        '**/karma.conf.js', // karma config
+        '**/postcss.config.js', // post css config
+        'deployment/**', // deployment script
+        'deploy/**', // deployment script
+        '.script/**', // build scripts
+        'ci/**' // ci scripts
       ],
       optionalDependencies: false,
     }],
@@ -134,13 +139,9 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-namespace.md
     'import/no-namespace': 'off',
 
-    // Ensure consistent use of file extension within the import path
+    // DISABLE: Ensure consistent use of file extension within the import path
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
-    'import/extensions': ['error', 'ignorePackages', {
-      js: 'never',
-      mjs: 'never',
-      jsx: 'never',
-    }],
+    'import/extensions': 'off',
 
     // ensure absolute imports are above relative imports and that unassigned imports are ignored
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
@@ -151,7 +152,7 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
     'import/newline-after-import': 'error',
 
-    // Require modules with a single export to use a default export
+    // DISABLE: Require modules with a single export to use a default export
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
     'import/prefer-default-export': 'off',
 

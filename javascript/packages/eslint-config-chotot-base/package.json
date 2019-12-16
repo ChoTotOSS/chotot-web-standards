@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-chotot-base",
-  "version": "14.0.0-beta.0",
+  "version": "14.0.0-beta.1",
   "description": "Chotot's base JS ESLint config, following our styleguide",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,7 @@
     "eslintconfig",
     "config",
     "airbnb",
+    "chotot",
     "javascript",
     "styleguide",
     "es2015",
@@ -66,11 +67,7 @@
     "eslint-plugin-import": "^2.18.2"
   },
   "engines": {
-    "node": ">= 6"
+    "node": ">= 8"
   },
-  "dependencies": {
-    "confusing-browser-globals": "^1.0.9",
-    "object.assign": "^4.1.0",
-    "object.entries": "^1.1.0"
-  }
+  "dependencies": {}
 }

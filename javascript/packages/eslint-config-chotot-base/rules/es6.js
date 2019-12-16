@@ -12,16 +12,15 @@ module.exports = {
   },
 
   rules: {
-    // enforces no braces where they can be omitted
+    // WARN-ONLY: enforces no braces where they can be omitted
     // https://eslint.org/docs/rules/arrow-body-style
-    // TODO: enable requireReturnForObjectLiteral?
-    'arrow-body-style': ['error', 'as-needed', {
+    'arrow-body-style': ['warn', 'as-needed', {
       requireReturnForObjectLiteral: false,
     }],
 
-    // require parens in arrow function arguments
+    // PRETTIER-CONFLICT: require parens in arrow function arguments
     // https://eslint.org/docs/rules/arrow-parens
-    'arrow-parens': ['error', 'always'],
+    'arrow-parens': ['off', 'always'],
 
     // require space before/after arrow function's arrow
     // https://eslint.org/docs/rules/arrow-spacing
@@ -38,9 +37,9 @@ module.exports = {
     // https://eslint.org/docs/rules/no-class-assign
     'no-class-assign': 'error',
 
-    // disallow arrow functions where they could be confused with comparisons
+    // DISABLE: disallow arrow functions where they could be confused with comparisons
     // https://eslint.org/docs/rules/no-confusing-arrow
-    'no-confusing-arrow': ['error', {
+    'no-confusing-arrow': ['off', {
       allowParens: true,
     }],
 
@@ -97,11 +96,12 @@ module.exports = {
       avoidQuotes: true,
     }],
 
-    // suggest using arrow functions as callbacks
-    'prefer-arrow-callback': ['error', {
-      allowNamedFunctions: false,
-      allowUnboundThis: true,
-    }],
+    // DISABLE: suggest using arrow functions as callbacks
+    'prefer-arrow-callback': 'off',
+    // ['error', {
+    //   allowNamedFunctions: false,
+    //   allowUnboundThis: true,
+    // }],
 
     // suggest using of const declaration for variables that are never modified after declared
     'prefer-const': ['error', {
@@ -140,9 +140,9 @@ module.exports = {
     // https://eslint.org/docs/rules/prefer-spread
     'prefer-spread': 'error',
 
-    // suggest using template literals instead of string concatenation
+    // DISABLE: suggest using template literals instead of string concatenation
     // https://eslint.org/docs/rules/prefer-template
-    'prefer-template': 'error',
+    'prefer-template': 'off',
 
     // disallow generator functions that do not have yield
     // https://eslint.org/docs/rules/require-yield

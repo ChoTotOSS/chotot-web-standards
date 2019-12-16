@@ -13,9 +13,9 @@ module.exports = {
     // specify the maximum cyclomatic complexity allowed in a program
     complexity: ['off', 11],
 
-    // enforce that class methods use "this"
+    // DISABLE: enforce that class methods use "this"
     // https://eslint.org/docs/rules/class-methods-use-this
-    'class-methods-use-this': ['error', {
+    'class-methods-use-this': ['off', {
       exceptMethods: [],
     }],
 
@@ -32,8 +32,8 @@ module.exports = {
     // TODO: enable, semver-minor, when eslint v6.4 is required (which is a major)
     'default-param-last': 'off',
 
-    // encourages use of dot notation whenever possible
-    'dot-notation': ['error', { allowKeywords: true }],
+    // DISABLE: encourages use of dot notation whenever possible
+    'dot-notation': ['off', { allowKeywords: true }],
 
     // enforces consistent newlines before or after dots
     // https://eslint.org/docs/rules/dot-location
@@ -43,12 +43,12 @@ module.exports = {
     // https://eslint.org/docs/rules/eqeqeq
     eqeqeq: ['error', 'always', { null: 'ignore' }],
 
-    // make sure for-in loops have an if statement
-    'guard-for-in': 'error',
+    // DISABLE: make sure for-in loops have an if statement
+    'guard-for-in': 'off',
 
-    // enforce a maximum number of classes per file
+    // DISABLE: enforce a maximum number of classes per file
     // https://eslint.org/docs/rules/max-classes-per-file
-    'max-classes-per-file': ['error', 1],
+    'max-classes-per-file': ['off', 1],
 
     // disallow the use of alert, confirm, and prompt
     'no-alert': 'warn',
@@ -72,9 +72,9 @@ module.exports = {
     // https://eslint.org/docs/rules/no-dupe-else-if
     'no-dupe-else-if': 'error',
 
-    // disallow else after a return in an if
+    // DISABLE: disallow else after a return in an if
     // https://eslint.org/docs/rules/no-else-return
-    'no-else-return': ['error', { allowElseIf: false }],
+    'no-else-return': ['off', { allowElseIf: false }],
 
     // disallow empty functions, except for standalone funcs/arrows
     // https://eslint.org/docs/rules/no-empty-function
@@ -182,24 +182,10 @@ module.exports = {
     // var foo = 'Copyright \251';
     'no-octal-escape': 'error',
 
-    // disallow reassignment of function parameters
+    // DISABLE: disallow reassignment of function parameters
     // disallow parameter object manipulation except for specific exclusions
     // rule: https://eslint.org/docs/rules/no-param-reassign.html
-    'no-param-reassign': ['error', {
-      props: true,
-      ignorePropertyModificationsFor: [
-        'acc', // for reduce accumulators
-        'accumulator', // for reduce accumulators
-        'e', // for e.returnvalue
-        'ctx', // for Koa routing
-        'req', // for Express requests
-        'request', // for Express requests
-        'res', // for Express responses
-        'response', // for Express responses
-        '$scope', // for Angular 1 scopes
-        'staticContext', // for ReactRouter context
-      ]
-    }],
+    'no-param-reassign': 'off',
 
     // disallow usage of __proto__ property
     'no-proto': 'error',
