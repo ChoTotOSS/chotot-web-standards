@@ -13,17 +13,14 @@ Currently:
 
 ### Configure `eslint-config-chotot`
 
-After adding `eslint-config-chotot` package to devDependencies, install these peer dependencies:
+```sh
+yarn add --dev eslint-config-chotot@latest
+```
 
-```json
-{
-  "babel-eslint": "^10.0.3",
-  "eslint": "^6.1.0",
-  "eslint-plugin-import": "^2.18.2",
-  "eslint-plugin-jsx-a11y": "^6.2.3",
-  "eslint-plugin-react": "^7.15.1",
-  "eslint-plugin-react-hooks": "^1.7.0",
-}
+After adding `eslint-config-chotot` package to `devDependencies`, execute below command to check for peer dependencies and then install the exact version of the listed peer dependencies:
+
+```sh
+npm info eslint-config-chotot@latest peerDependencies
 ```
 
 Create a `.eslintrc` at root of project with following content:

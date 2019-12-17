@@ -2,15 +2,19 @@
 
 [![npm version](https://badge.fury.io/js/eslint-config-chotot.svg)](http://badge.fury.io/js/eslint-config-chotot)
 
-This package provides Airbnb's .eslintrc as an extensible shared config.
+This package provides Chotot's .eslintrc as an extensible shared config. The config is based on [Airbnb's](https://github.com/airbnb/javascript) but with following important differences:
+
+- Built-in support for [Prettier](https://prettier.io) (skip prettier's auto formatting rules)
+- Built-in support for experimental ES syntax (via `eslint-babel` parser).
+- Many rules were relaxed to provide some flexibility and improve developer's ergonomics.
 
 ## Usage
 
-We export three ESLint configurations for your usage.
+We export following ESLint configurations for your usage.
 
 ### eslint-config-chotot
 
-Our default export contains all of our ESLint rules, including ECMAScript 6+ and React. It requires `eslint`, `eslint-plugin-import`, `eslint-plugin-react`, `eslint-plugin-react-hooks`, and `eslint-plugin-jsx-a11y`. If you don't need React, see [eslint-config-chotot-base](https://npmjs.com/eslint-config-chotot-base).
+Our default export contains all of our ESLint rules, including ECMAScript 6+ and React. It requires `eslint`, `eslint-plugin-import`, `eslint-plugin-react`, `eslint-plugin-react-hooks`, `eslint-plugin-jsx-a11y` and `eslint-babel`. If you don't need React, see [eslint-config-chotot-base](https://npmjs.com/eslint-config-chotot-base).
 
 1. Install the correct versions of each package, which are listed by the command:
 
@@ -54,25 +58,19 @@ Our default export contains all of our ESLint rules, including ECMAScript 6+ and
   npm install --save-dev eslint-config-chotot eslint@^#.#.# eslint-plugin-jsx-a11y@^#.#.# eslint-plugin-import@^#.#.# eslint-plugin-react@^#.#.# eslint-plugin-react-hooks@^#.#.#
   ```
 
-2. Add `"extends": "airbnb"` to your `.eslintrc`
+2. Add `"extends": "chotot"` to your `.eslintrc`
 
-### eslint-config/airbnb/hooks
+### eslint-config-chotot/hooks
 
-This entry point enables the linting rules for React hooks (requires v16.8+). To use, add `"extends": ["airbnb", "airbnb/hooks"]` to your `.eslintrc`
-
-### eslint-config-chotot/whitespace
-
-This entry point only errors on whitespace rules and sets all other rules to warnings. View the list of whitespace rules [here](https://github.com/chototoss/chotot-web-standards/blob/master/packages/eslint-config-chotot/whitespace.js).
+This entry point enables the linting rules for React hooks (requires v16.8+). To use, add `"extends": ["chotot", "chotot/hooks"]` to your `.eslintrc`
 
 ### eslint-config-chotot/base
 
 This entry point is deprecated. See [eslint-config-chotot-base](https://npmjs.com/eslint-config-chotot-base).
 
-### eslint-config-chotot/legacy
+## Chotot JavaScript Style Guide
 
-This entry point is deprecated. See [eslint-config-chotot-base](https://npmjs.com/eslint-config-chotot-base).
-
-See [Airbnb's JavaScript styleguide](https://github.com/chototoss/chotot-web-standards) and
+This eslint config preset is to validate and enfore Chotot's JavaScript style guide. See [Chotot's JavaScript style guide](https://github.com/ChoTotOSS/chotot-web-standards/tree/master/javascript) and
 the [ESlint config docs](https://eslint.org/docs/user-guide/configuring#extending-configuration-files)
 for more information.
 

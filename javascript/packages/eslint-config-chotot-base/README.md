@@ -2,15 +2,13 @@
 
 [![npm version](https://badge.fury.io/js/eslint-config-chotot-base.svg)](http://badge.fury.io/js/eslint-config-chotot-base)
 
-This package provides Airbnb's base JS .eslintrc (without React plugins) as an extensible shared config.
+This package provides Chotot's base JS .eslintrc (without React plugins) as an extensible shared config.
 
 ## Usage
 
-We export two ESLint configurations for your usage.
-
 ### eslint-config-chotot-base
 
-Our default export contains all of our ESLint rules, including ECMAScript 6+. It requires `eslint` and `eslint-plugin-import`.
+Our default export contains all of our ESLint rules, including ECMAScript 6+. It requires `eslint`, `eslint-plugin-import` and `babel-eslint`.
 
 1. Install the correct versions of each package, which are listed by the command:
 
@@ -56,39 +54,8 @@ Our default export contains all of our ESLint rules, including ECMAScript 6+. It
   npm install --save-dev eslint-config-chotot-base eslint@^#.#.# eslint-plugin-import@^#.#.#
   ```
 
-2. Add `"extends": "airbnb-base"` to your .eslintrc.
+2. Add `"extends": "chotot-base"` to your .eslintrc.
 
-### eslint-config-chotot-base/legacy
-
-Lints ES5 and below. Requires `eslint` and `eslint-plugin-import`.
-
-1. Install the correct versions of each package, which are listed by the command:
-
-  ```sh
-  npm info "eslint-config-chotot-base@latest" peerDependencies
-  ```
-
-  Linux/OSX users can run
-  ```sh
-  (
-    export PKG=eslint-config-chotot-base;
-    npm info "$PKG" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs npm install --save-dev "$PKG"
-  )
-  ```
-
-  Which produces and runs a command like:
-
-  ```sh
-  npm install --save-dev eslint-config-chotot-base eslint@^3.0.1 eslint-plugin-import@^1.10.3
-  ```
-
-2. Add `"extends": "airbnb-base/legacy"` to your .eslintrc
-
-See [Airbnb's overarching ESLint config](https://npmjs.com/eslint-config-chotot), [Airbnb's JavaScript styleguide](https://github.com/chototoss/chotot-web-standards), and the [ESlint config docs](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) for more information.
-
-### eslint-config-chotot-base/whitespace
-
-This entry point only errors on whitespace rules and sets all other rules to warnings. View the list of whitespace rules [here](https://github.com/chototoss/chotot-web-standards/blob/master/packages/eslint-config-chotot-base/whitespace.js).
 
 ## Improving this config
 
