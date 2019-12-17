@@ -8,8 +8,6 @@
  * We inline it here to avoid unnecessary remote dependency
  */
 
-'use strict';
-
 module.exports = [
   'addEventListener',
   'blur',
