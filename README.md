@@ -7,7 +7,12 @@ Currently:
 - [JavaScript style guide](https://github.com/ChoTotOSS/chotot-web-standards/tree/master/javascript)
   - [`eslint-config-chotot`](https://www.npmjs.com/package/eslint-config-chotot)
   - [`eslint-config-chotot-base`](https://www.npmjs.com/package/eslint-config-chotot-base)
-
+- [Editors' baseline set-up](https://github.com/ChoTotOSS/chotot-web-standards/tree/master/editors), currently:
+  - Visual Studio Code
+  - Sublime Text 3
+- Git work flow:
+  - Commit message conventions following [conventionalcommits.org](https://www.conventionalcommits.org/en/v1.0.0/)
+  - Git work flow: [TBD]
 
 ## HOW-TO
 
@@ -47,4 +52,14 @@ Then update `.eslintrc` with following config:
   }
 }
 ```
+
+---
+
+© 2019 - Chotot.vn
+
+Code is licensed under [MIT license](https://opensource.org/licenses/MIT). Document is licensed under [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/)
+
+![CC-BY-NC 4.0](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)
+
+
 

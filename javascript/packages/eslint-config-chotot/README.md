@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/eslint-config-chotot.svg)](http://badge.fury.io/js/eslint-config-chotot)
 
-This package provides Chotot's .eslintrc as an extensible shared config. The config is based on [Airbnb's](https://github.com/airbnb/javascript) but with following important differences:
+This package provides Chotot's .eslintrc as an extensible shared config. This config is based on [Airbnb's](https://github.com/airbnb/javascript) but with following important differences:
 
 - Built-in support for [Prettier](https://prettier.io) (skip prettier's auto formatting rules)
 - Built-in support for experimental ES syntax (via `eslint-babel` parser).

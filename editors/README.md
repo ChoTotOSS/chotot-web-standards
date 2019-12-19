@@ -10,4 +10,4 @@ These files are initial settings for [Sublime Text 3](https://www.sublimetext.co
 
 ## VSCode
 
-These files are initial settings for [Visual Studio Code](https://code.visualstudio.com/) and should be copied to ST3 `Packages` folder.
+There is guide for [Visual Studio Code](https://code.visualstudio.com/) regarding baseline extensions and settings.
