@@ -1,5 +1,4 @@
-# Editor's Settings for Chotot Web Standards
-
+# Editor's Settings Baseline for Chotot Web Standards
 
 ## Sublime Text 3
 
@@ -8,3 +7,7 @@ These files are initial settings for [Sublime Text 3](https://www.sublimetext.co
 ## VSCode
 
 There is guide for [Visual Studio Code](https://code.visualstudio.com/) regarding baseline extensions and settings.
+
+## WebStorm
+
+[TBD]

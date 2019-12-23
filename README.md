@@ -10,6 +10,7 @@ Currently:
 - [Editors' baseline set-up](https://github.com/ChoTotOSS/chotot-web-standards/tree/master/editors), currently:
   - Visual Studio Code
   - Sublime Text 3
+- [Dot files](https://github.com/ChoTotOSS/chotot-web-standards/tree/master/dotfiles): a set of project's environment configs
 - Git work flow:
   - Commit message conventions following [conventionalcommits.org](https://www.conventionalcommits.org/en/v1.0.0/)
   - Git work flow: [TBD]
