@@ -1,0 +1,44 @@
+---
+# These Gitlab CI/CD scripts are samples for current Chotot Web work flow
+
+# Cache modules in between jobs
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+before_script:
+  - pwd
+stages:
+  - test
+  - lighthouse
+
+test:
+  stage: test
+  before_script:
+    - export PATH="$(yarn global bin):$PATH"
+    - yarn  # install dependencies
+  script:
+    # run npm script test, define your own tests in package.json
+    - yarn test
+  only:
+    - merge_requests
+  tags:
+    - shell
+
+# NOTE: define a LHCI_TOKEN env variable in Gitlab CI/CD settings
+lighthouse:
+  stage: lighthouse
+  # this image has good browser testing defaults
+  image: cypress/browsers:node10.16.0-chrome77
+  before_script:
+    - export PATH="$(yarn global bin):$PATH"
+    - yarn global add @lhci/cli@0.3.x
+  script:
+    - yarn  # install dependencies
+    - yarn build  # run build for production
+    - yarn lhci  # run lighthouse CI assert and report collection
+  only:
+    - staging
+    - master
+  tags:
+    - docker

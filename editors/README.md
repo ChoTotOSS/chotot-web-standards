@@ -1,8 +1,5 @@
 # Editor's Settings for Chotot Web Standards
 
-## Dot files
-
-These dot files are prefixed with underscore so they are not hidden. You should remove `_` when copy these dot files to the root of a Web project repository.
 
 ## Sublime Text 3
 
