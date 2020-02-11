@@ -7,7 +7,7 @@ const base = require('../base');
 const files = { base };
 
 fs.readdirSync(path.join(__dirname, '../rules')).forEach((name) => {
-  if (name === 'react.js' || name === 'react-a11y.js') {
+  if (name === 'react.js' || name === 'react-a11y.js' || name === 'next.js') {
     return;
   }
 

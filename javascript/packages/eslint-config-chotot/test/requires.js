@@ -8,6 +8,7 @@ test('all entry points parse', (t) => {
   t.doesNotThrow(() => require('..'), 'index does not throw');
   t.doesNotThrow(() => require('../base'), 'base does not throw');
   t.doesNotThrow(() => require('../hooks'), 'hooks does not throw');
+  t.doesNotThrow(() => require('../next'), 'next does not throw');
 
   t.end();
 });
