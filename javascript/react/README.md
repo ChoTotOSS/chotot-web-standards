@@ -1,6 +1,6 @@
 # Airbnb React/JSX Style Guide
 
-*A mostly reasonable approach to React and JSX*
+_Based and adapted from [Airbnb React](https://github.com/airbnb/javascript/tree/master/react) style guide._
 
 This style guide is mostly based on the standards that are currently prevalent in JavaScript, although some conventions (i.e async/await or static class fields) may still be included or prohibited on a case-by-case basis. Currently, anything prior to stage 3 is not included nor recommended in this guide.
 

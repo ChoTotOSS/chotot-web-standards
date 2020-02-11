@@ -1,5 +1,5 @@
 {
-  "name": "chotot-style",
+  "name": "chotot-web-standards",
   "version": "1.0.0",
   "description": "A mostly reasonable approach to JavaScript.",
   "scripts": {
@@ -33,7 +33,7 @@
     "react",
     "jsx"
   ],
-  "author": "Thanh Tran <thanhtran@chotot.vn> (https://twitter.com/trongthanh)",
+  "author": "Chotot OSS <dev@chotot.vn> (https://github.com/chototoss)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/chototoss/chotot-web-standards/issues"

@@ -56,11 +56,11 @@ Then update `.eslintrc` with following config:
 
 ---
 
-© 2019 - Chotot.vn
+© 2020 - Chotot.vn
 
-Code is licensed under [MIT license](https://opensource.org/licenses/MIT). Document is licensed under [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/)
+Code is licensed under [MIT license](https://opensource.org/licenses/MIT). Document is licensed under [Creative Commons Attribution-ShareAlike 4.0 International License.](http://creativecommons.org/licenses/by-sa/4.0/)
 
-![CC-BY-NC 4.0](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)
+![CC-BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/88x31.png)
 
 
 

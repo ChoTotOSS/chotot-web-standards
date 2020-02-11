@@ -7,6 +7,7 @@ This package provides Chotot's .eslintrc as an extensible shared config. This co
 - Built-in support for [Prettier](https://prettier.io) (skip prettier's auto formatting rules)
 - Built-in support for experimental ES syntax (via `eslint-babel` parser).
 - Many rules were relaxed to provide some flexibility and improve developer's ergonomics.
+- Extra supports for [Next.js framework](https://nextjs.org/)
 
 ## Usage
 
@@ -59,6 +60,10 @@ Our default export contains all of our ESLint rules, including ECMAScript 6+ and
   ```
 
 2. Add `"extends": "chotot"` to your `.eslintrc`
+
+### eslint-config-chotot/nextjs
+
+This entry point enables the linting rules for [Next.js framework](https://nextjs.org/). To use, add `"extends": ["chotot", "chotot/nextjs"]` to your `.eslintrc`
 
 ### eslint-config-chotot/hooks
 
