@@ -1,4 +1,4 @@
-# Chotot base editor's config - Read more: https://editorconfig.org
+# Chotot's base .editorconfig - Read more: https://editorconfig.org
 
 root = true
 
@@ -13,4 +13,4 @@ end_of_line = lf
 max_line_length = off
 
 [CHANGELOG.md]
-indent_size = false
+indent_size = unset
