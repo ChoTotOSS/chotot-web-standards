@@ -1,5 +1,10 @@
 # gitignore
 
+# Jekyll build
+_site
+.sass-cache
+Gemfile.lock
+
 # Node.js
 node_modules
 

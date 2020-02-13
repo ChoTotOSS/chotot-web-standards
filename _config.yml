@@ -1,1 +1,14 @@
+# Site settings
+title: Chotot Web Standards
+email: dev@chotot.vn
+description: "Chotot Web Standards documentation"
+baseurl: ""
+
+# Build settings
 theme: jekyll-theme-cayman
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
