@@ -2,7 +2,7 @@
 title: Chotot Web Standards
 email: dev@chotot.vn
 description: "Chotot Web Standards documentation"
-baseurl: ""
+baseurl: "chotot-web-standards"
 
 # Build settings
 theme: jekyll-theme-cayman
