@@ -343,7 +343,7 @@ module.exports = {
     'spaced-comment': ['error', 'always', {
       line: {
         exceptions: ['-', '+'],
-        markers: ['=', '!'], // space here to support sprockets directives
+        markers: ['=', '!', '/'], // space here to support sprockets directives, TS triple-slash directives
       },
       block: {
         exceptions: ['-', '+'],
