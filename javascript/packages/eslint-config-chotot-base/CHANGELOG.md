@@ -1,6 +1,7 @@
-14.0.1 / 2019-12-10
+14.1.0 / 2020-03-13
 ===================
 - Allows triple slash comments from TypeScript
+- Turn back on some style rules as precaution in case prettier is skipped
 
 14.0.0 / 2019-12-10
 ===================

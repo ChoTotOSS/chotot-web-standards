@@ -2,6 +2,26 @@
 // The exhastive list below is referred from https://github.com/prettier/eslint-config-prettier/blob/master/index.js
 module.exports = {
   rules: {
+    // These are style rules that are included in eslint-config-prettier, but won't conflict with prettier,
+    // so turned on for precaution in case prettier was skipped
+
+    // require trailing commas in multiline object literals
+    'comma-dangle': ['error', {
+      arrays: 'always-multiline',
+      objects: 'always-multiline',
+      imports: 'always-multiline',
+      exports: 'always-multiline',
+      functions: 'ignore',
+    }],
+    // enforce spacing before and after comma
+    'comma-spacing': ['error', { before: false, after: true }],
+    // require newline at the end of files
+    'eol-last': ['error', 'always'],
+    // enforces spacing between keys and values in object literal properties
+    'key-spacing': ['error', { beforeColon: false, afterColon: true }],
+    // require or disallow use of semicolons instead of ASI
+    semi: ['error', 'always'],
+
     // These are rules that you never need to enable when using Prettier.
     'array-bracket-newline': 'off',
     'array-bracket-spacing': 'off',
@@ -10,12 +30,9 @@ module.exports = {
     'arrow-spacing': 'off',
     'block-spacing': 'off',
     'brace-style': 'off',
-    'comma-dangle': 'off',
-    'comma-spacing': 'off',
     'comma-style': 'off',
     'computed-property-spacing': 'off',
     'dot-location': 'off',
-    'eol-last': 'off',
     'func-call-spacing': 'off',
     'function-call-argument-newline': 'off',
     'function-paren-newline': 'off',
@@ -24,14 +41,12 @@ module.exports = {
     'implicit-arrow-linebreak': 'off',
     indent: 'off',
     'jsx-quotes': 'off',
-    'key-spacing': 'off',
     'keyword-spacing': 'off',
     'linebreak-style': 'off',
     'multiline-ternary': 'off',
     'newline-per-chained-call': 'off',
     'new-parens': 'off',
     'no-arrow-condition': 'off',
-    'no-comma-dangle': 'off',
     'no-extra-parens': 'off',
     'no-extra-semi': 'off',
     'no-floating-decimal': 'off',
@@ -52,7 +67,6 @@ module.exports = {
     'padded-blocks': 'off',
     'quote-props': 'off',
     'rest-spread-spacing': 'off',
-    semi: 'off',
     'semi-spacing': 'off',
     'semi-style': 'off',
     'space-after-function-name': 'off',
