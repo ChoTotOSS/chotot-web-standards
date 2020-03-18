@@ -1,3 +1,9 @@
+18.2.0 / 2020-03-18
+===================
+- Syn new `eslint-config-chotot` update
+- Disable some react* and jsx-a11y* rules from our trials with Next.js framework
+- Adding new rules in latest `eslint-plugin-react`
+
 18.1.0 / 2020-02-11
 ===================
 - Add `chotot/next` configs specialized for projects using Next.js framework
