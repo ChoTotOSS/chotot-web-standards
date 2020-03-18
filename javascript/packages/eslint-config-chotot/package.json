@@ -70,10 +70,10 @@
   "peerDependencies": {
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0 || ^6.7.0",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.15.1",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.0"
   },
   "engines": {
     "node": ">= 10"
