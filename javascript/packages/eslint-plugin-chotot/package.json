@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-chotot",
-  "version": "1.0.0-beta.1",
-  "description": "Assorted Chotot ESLint rules",
+  "version": "1.0.0",
+  "description": "Assorted custom Chotot ESLint rules",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "node": ">=8"
   },
   "scripts": {
+    "prepublishOnly": "npm run lint && npm test",
     "test": "nyc ava",
     "lint": "node ./test/lint/lint.js"
   },

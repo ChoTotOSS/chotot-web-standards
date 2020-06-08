@@ -2,8 +2,6 @@
 
 Collection of custom ESLint rules that are used by [`eslint-config-chotot`](https://github.com/chototoss/chotot-web-standards)
 
-
-
 [**Propose or contribute a new rule ➡**](.github/contributing.md)
 
 ## Install
@@ -28,11 +26,11 @@ Configure it in `package.json`.
       "sourceType": "module"
     },
     "plugins": [
-      "unicorn"
+      "chotot"
     ],
     "rules": {
-      "unicorn/filename-case": "error",
-      "unicorn/no-abusive-eslint-disable": "error",
+      "chotot/filename-case": "error",
+      "chotot/no-abusive-eslint-disable": "error",
     }
   }
 }
