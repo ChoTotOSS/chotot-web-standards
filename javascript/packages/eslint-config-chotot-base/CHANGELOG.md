@@ -1,3 +1,8 @@
+14.2.0 / 2020-06-08
+===================
+- Remove babel-eslint parser from this config (we should keep it as plain as possible)
+- Update few packages to latest version
+
 14.1.0 / 2020-03-13
 ===================
 - Allows triple slash comments from TypeScript
