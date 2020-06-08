@@ -1,3 +1,10 @@
+19.0.0 / 2020-06-08
+===================
+- Turn off `react-hooks/exhaustive-deps` as discussed among Chotot Web chapter committee
+- [Break] Add `eslint-plugin-chotot` as new peerDependencies
+- [Break] Add `chotot/no-abusive-eslint-disable` (error) and `chotot/filename-case` (warn) to `chotot` sharable config
+- Upgrade `eslint-plugin-hooks` peer dependency to 4.0.0
+
 18.2.0 / 2020-03-18
 ===================
 - Syn new `eslint-config-chotot` update
