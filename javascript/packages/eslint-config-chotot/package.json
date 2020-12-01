@@ -55,7 +55,7 @@
     "rules/**/*.js"
   ],
   "dependencies": {
-    "eslint-config-chotot-base": "^15.0.0-beta"
+    "eslint-config-chotot-base": "^14.0.0"
   },
   "devDependencies": {
     "@babel/runtime": "^7.12.5",

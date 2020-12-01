@@ -137,10 +137,6 @@ module.exports = {
     // TODO: enable
     'func-style': ['off', 'expression'],
 
-    // Blacklist certain identifiers to prevent them being used
-    // https://eslint.org/docs/rules/id-blacklist
-    'id-blacklist': 'off',
-
     // this option enforces minimum and maximum identifier lengths
     // (variable names, property names etc.)
     'id-length': 'off',
@@ -163,13 +159,6 @@ module.exports = {
 
     // enforces empty lines around comments
     'lines-around-comment': 'off',
-
-    // require or disallow newlines around directives
-    // https://eslint.org/docs/rules/lines-around-directive
-    'lines-around-directive': ['error', {
-      before: 'always',
-      after: 'always',
-    }],
 
     // specify the maximum depth that blocks can be nested
     'max-depth': ['off', 4],
@@ -225,12 +214,6 @@ module.exports = {
       capIsNew: false,
       capIsNewExceptions: ['Immutable.Map', 'Immutable.Set', 'Immutable.List'],
     }],
-
-    // allow/disallow an empty newline after var statement
-    'newline-after-var': 'off',
-
-    // https://eslint.org/docs/rules/newline-before-return
-    'newline-before-return': 'off',
 
     // disallow use of the Array constructor
     'no-array-constructor': 'error',
@@ -314,9 +297,6 @@ module.exports = {
       },
     ],
 
-    // disallow space between function identifier and application
-    'no-spaced-func': 'error',
-
     // disallow tab characters entirely
     'no-tabs': 'error',
 
@@ -341,10 +321,6 @@ module.exports = {
 
     // specify whether double or single quotes should be used
     quotes: ['error', 'single', { avoidEscape: true }],
-
-    // do not require jsdoc
-    // https://eslint.org/docs/rules/require-jsdoc
-    'require-jsdoc': 'off',
 
     // requires object keys to be sorted
     'sort-keys': ['off', 'asc', { caseSensitive: false, natural: true }],

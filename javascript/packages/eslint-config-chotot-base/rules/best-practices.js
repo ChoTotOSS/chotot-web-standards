@@ -115,9 +115,7 @@ module.exports = {
     // disallow reassignments of native objects or read-only globals
     // https://eslint.org/docs/rules/no-global-assign
     'no-global-assign': ['error', { exceptions: [] }],
-    // deprecated in favor of no-global-assign
-    'no-native-reassign': 'off',
-
+    
     // disallow implicit type conversions
     // https://eslint.org/docs/rules/no-implicit-coercion
     'no-implicit-coercion': ['off', {
@@ -339,5 +337,29 @@ module.exports = {
 
     // require or disallow Yoda conditions
     yoda: 'error',
+
+    // enforce default clauses in switch statements to be last
+    // https://eslint.org/docs/rules/default-case-last
+    'default-case-last': 'error',
+
+    // disallow number literals that lose precision
+    // https://eslint.org/docs/rules/no-loss-of-precision
+    'no-loss-of-precision': 'error',
+
+    // disallow \8 and \9 escape sequences in string literals
+    // https://eslint.org/docs/rules/no-nonoctal-decimal-escape
+    'no-nonoctal-decimal-escape': 'error',
+
+    // disallow returning values from Promise executor functions
+    // https://eslint.org/docs/rules/no-promise-executor-return
+    'no-promise-executor-return': 'error',
+
+    // disallow loops with a body that allows only one iteration
+    // https://eslint.org/docs/rules/no-unreachable-loop
+    'no-unreachable-loop': 'error',
+
+    // disallow useless backreferences in regular expressions
+    // https://eslint.org/docs/rules/no-useless-backreference
+    'no-useless-backreference': 'error',
   }
 };

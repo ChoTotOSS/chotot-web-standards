@@ -46,17 +46,6 @@ module.exports = {
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-redundant-alt.md
     'jsx-a11y/img-redundant-alt': 'error',
 
-    // require that JSX labels use "htmlFor"
-    // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-for.md
-    // deprecated: replaced by `label-has-associated-control` rule
-    'jsx-a11y/label-has-for': ['off', {
-      components: [],
-      required: {
-        every: ['nesting', 'id'],
-      },
-      allowChildren: false,
-    }],
-
     // Enforce that a label tag has a text label and an associated control.
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/b800f40a2a69ad48015ae9226fbe879f946757ed/docs/rules/label-has-associated-control.md
     'jsx-a11y/label-has-associated-control': ['error', {
@@ -179,10 +168,6 @@ module.exports = {
       ]
     }],
 
-    // ensure emoji are accessible
-    // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/accessible-emoji.md
-    'jsx-a11y/accessible-emoji': 'error',
-
     // elements with aria-activedescendant must be tabbable
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-activedescendant-has-tabindex.md
     'jsx-a11y/aria-activedescendant-has-tabindex': 'error',
@@ -237,5 +222,9 @@ module.exports = {
       specialLink: ['to'],
       aspects: ['noHref', 'invalidHref', 'preferButton'],
     }],
+
+    // ensure the autocomplete attribute is correct and suitable for the form field it is used with
+    // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/docs/rules/autocomplete-valid.md
+    'jsx-a11y/autocomplete-valid': 'off',
   },
 };

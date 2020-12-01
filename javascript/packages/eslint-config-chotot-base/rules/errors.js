@@ -121,9 +121,6 @@ module.exports = {
     // disallow negating the left operand of relational operators
     // https://eslint.org/docs/rules/no-unsafe-negation
     'no-unsafe-negation': 'error',
-    // disallow negation of the left operand of an in expression
-    // deprecated in favor of no-unsafe-negation
-    'no-negated-in-lhs': 'off',
 
     // Disallow assignments that can lead to race conditions due to usage of await or yield
     // https://eslint.org/docs/rules/require-atomic-updates
@@ -132,10 +129,6 @@ module.exports = {
 
     // disallow comparisons with the value NaN
     'use-isnan': 'error',
-
-    // ensure JSDoc comments are valid
-    // https://eslint.org/docs/rules/valid-jsdoc
-    'valid-jsdoc': 'off',
 
     // ensure that the results of typeof are compared against a valid string
     // https://eslint.org/docs/rules/valid-typeof
