@@ -14,11 +14,15 @@
 		"JSCustom",
 		"JsPrettier",
 		"LESS",
+		"LSP",
+		"LSP-typescript",
+		"nginx",
 		"Package Control",
 		"Pretty JSON",
 		"React ES6 Snippets",
 		"Sass",
 		"Select Quoted",
+		"Sublime ES7 React Redux ReactNative JS snippets",
 		"SublimeLinter",
 		"SublimeLinter-annotations",
 		"SublimeLinter-contrib-yamllint",
@@ -27,6 +31,5 @@
 		"SublimeLinter-stylelint",
 		"Terminal",
 		"TodoReview",
-		"TypeScript",
 	]
 }

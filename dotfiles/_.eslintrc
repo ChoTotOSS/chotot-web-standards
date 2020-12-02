@@ -4,7 +4,9 @@
 {
   "extends": ["chotot"],
   "settings": {
-    "import/resolver": "babel-plugin-root-import"
+    "import/resolver": {
+      "babel-module": {}
+    }
   },
   "env": {
     "browser": true

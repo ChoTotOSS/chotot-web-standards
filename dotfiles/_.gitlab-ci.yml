@@ -1,6 +1,9 @@
 ---
 # These Gitlab CI/CD scripts are samples for current Chotot Web work flow
 
+# Use LTS node version
+image: node:14-alpine
+
 # Cache modules in between jobs
 cache:
   key: ${CI_COMMIT_REF_SLUG}
@@ -10,26 +13,58 @@ before_script:
   - pwd
 stages:
   - test
+  - analyze
+  - sonar
   - lighthouse
 
 test:
   stage: test
   before_script:
     - export PATH="$(yarn global bin):$PATH"
-    - yarn  # install dependencies
+    - yarn global add typescript
+    - yarn install
   script:
-    # run npm script test, define your own tests in package.json
+    # type checking with tsc
+    - yarn type-check
+    # linting and unit test
     - yarn test
   only:
     - merge_requests
   tags:
-    - shell
+    - docker
+
+# special `pages` name make gitlab generate reports and upload to gitlab pages
+pages:
+  stage: analyze
+  before_script:
+    - yarn install
+  script:
+    # check for prerelease version, but warns only
+    - npx check-semver --warn-only
+    # linting and unit test with coverage report
+    - yarn test:coverage
+    # generate a build with bundle analyzer report
+    - yarn analyze
+    # gather reports and index template into public folder
+    - mv coverage public
+    - mv .next/analyze public/analyze
+    - mv eslint-report.json public/
+    - cp deployment/report.html public/index.html
+  coverage: /All\sfiles.*?\s+(\d+.\d+)/
+  artifacts:
+    paths:
+      # must be public
+      - public
+  only:
+    - develop
+  tags:
+    - docker
 
 # NOTE: define a LHCI_TOKEN env variable in Gitlab CI/CD settings
 lighthouse:
   stage: lighthouse
-  # this image has good browser testing defaults
-  image: cypress/browsers:node10.16.0-chrome77
+  # this image has lhci CLI and able to audit website on headless container
+  image: patrickhulce/lhci-client:0.5.0
   before_script:
     - export PATH="$(yarn global bin):$PATH"
     - yarn global add @lhci/cli@0.3.x
@@ -38,7 +73,7 @@ lighthouse:
     - yarn build  # run build for production
     - yarn lhci  # run lighthouse CI assert and report collection
   only:
-    - staging
+    - uat
     - master
   tags:
     - docker
