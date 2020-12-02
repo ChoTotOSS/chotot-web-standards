@@ -1,3 +1,17 @@
+20.0.0 / 2020-12-02
+===================
+
+- Upgrade to eslint 7.14
+- Add new rules since eslint 7 and new version of plugins
+- Hook rules are now part of config `chotot` and no longer separated `chotot/hooks`.
+- BREAKING: switch 'import/no-anonymous-default-export' to error
+- BREAKING: new rule with error catch `default-case-last`
+- BREAKING: new rule with error catch `no-loss-of-precision`
+- BREAKING: new rule with error catch `no-nonoctal-decimal-escape`
+- BREAKING: new rule with error catch `no-promise-executor-return`
+- BREAKING: new rule with error catch `no-unreachable-loop`
+- BREAKING: new rule with error catch `no-useless-backreference`
+
 19.0.0 / 2020-06-08
 ===================
 - Turn off `react-hooks/exhaustive-deps` as discussed among Chotot Web chapter committee
