@@ -1,3 +1,10 @@
+15.0.0 / 2020-12-02
+===================
+
+- Upgrade to eslint 7.14
+- Add new rules since eslint 7
+- Remove deprecated rules that are already off
+
 14.2.0 / 2020-06-08
 ===================
 - Remove babel-eslint parser from this config (we should keep it as plain as possible)
