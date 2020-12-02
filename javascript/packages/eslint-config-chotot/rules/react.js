@@ -65,7 +65,10 @@ module.exports = {
 
     // Enforce a specific function type for function components
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/function-component-definition.md
-    'react/function-component-definition': 'off',
+    'react/function-component-definition': ['warn', {
+      namedComponents: 'arrow-function',
+      unnamedComponents: 'arrow-function',
+    }],
 
     // Enforce boolean attributes notation in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
