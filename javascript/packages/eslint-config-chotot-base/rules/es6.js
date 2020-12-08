@@ -128,10 +128,6 @@ module.exports = {
     // https://eslint.org/docs/rules/prefer-numeric-literals
     'prefer-numeric-literals': 'error',
 
-    // suggest using Reflect methods where applicable
-    // https://eslint.org/docs/rules/prefer-reflect
-    'prefer-reflect': 'off',
-
     // use rest parameters instead of arguments
     // https://eslint.org/docs/rules/prefer-rest-params
     'prefer-rest-params': 'error',

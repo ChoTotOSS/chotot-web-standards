@@ -5,9 +5,6 @@ module.exports = {
     // enforce or disallow variable initializations at definition
     'init-declarations': 'off',
 
-    // disallow the catch clause parameter name being the same as a variable in the outer scope
-    'no-catch-shadow': 'off',
-
     // disallow deletion of variables
     'no-delete-var': 'error',
 
@@ -41,5 +38,13 @@ module.exports = {
 
     // RELAX: disallow use of variables before they are defined
     'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
+
+    // disallow specified identifiers
+    // https://eslint.org/docs/rules/id-denylist
+    'id-denylist': 'off',
+
+    // disallow specified names in exports
+    // https://eslint.org/docs/rules/no-restricted-exports
+    'no-restricted-exports': 'off',
   }
 };

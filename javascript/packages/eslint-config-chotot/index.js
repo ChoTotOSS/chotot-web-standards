@@ -3,6 +3,7 @@ module.exports = {
     'eslint-config-chotot-base',
     './rules/chotot',
     './rules/react',
+    './rules/react-hooks',
     './rules/react-a11y',
   ].map(require.resolve),
   parser: 'babel-eslint',

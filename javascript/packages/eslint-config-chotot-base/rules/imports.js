@@ -125,11 +125,6 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
     'import/first': 'error',
 
-    // disallow non-import statements appearing before import statements
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/imports-first.md
-    // deprecated: use `import/first`
-    'import/imports-first': 'off',
-
     // disallow duplicate imports
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
     'import/no-duplicates': 'error',
@@ -200,11 +195,13 @@ module.exports = {
 
     // Reports if a module's default export is unnamed
     // https://github.com/benmosher/eslint-plugin-import/blob/d9b712ac7fd1fddc391f7b234827925c160d956f/docs/rules/no-anonymous-default-export.md
-    'import/no-anonymous-default-export': ['off', {
+    // Turn on due to: https://twitter.com/dan_abramov/status/1255229440860262400
+    'import/no-anonymous-default-export': ['error', {
       allowArray: false,
       allowArrowFunction: false,
       allowAnonymousClass: false,
       allowAnonymousFunction: false,
+      allowCallExpression: true, // allow: `export default foo(bar)`
       allowLiteral: false,
       allowObject: false,
     }],
