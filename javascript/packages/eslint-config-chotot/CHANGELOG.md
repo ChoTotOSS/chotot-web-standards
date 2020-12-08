@@ -1,7 +1,7 @@
-20.0.0 / 2020-12-02
+20.0.0 / 2020-12-08
 ===================
 
-- Upgrade to eslint 7.14
+- Upgrade to eslint 7.15
 - Add new rules since eslint 7 and new version of plugins
 - Hook rules are now part of config `chotot` and no longer separated `chotot/hooks`.
 - BREAKING: switch 'import/no-anonymous-default-export' to error
@@ -11,6 +11,7 @@
 - BREAKING: new rule with error catch `no-promise-executor-return`
 - BREAKING: new rule with error catch `no-unreachable-loop`
 - BREAKING: new rule with error catch `no-useless-backreference`
+- BREAKING: new rule with error catch `no-unsafe-optional-chaining`
 
 19.0.0 / 2020-06-08
 ===================

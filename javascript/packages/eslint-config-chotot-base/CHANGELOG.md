@@ -1,3 +1,8 @@
+15.1.0 / 2020-12-08
+===================
+
+- Upgrade to eslint 7.15 with new rule `no-unsafe-optional-chaining`
+
 15.0.0 / 2020-12-02
 ===================
 

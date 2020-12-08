@@ -15,25 +15,37 @@ module.exports = {
     }],
     // enforce spacing before and after comma
     'comma-spacing': ['error', { before: false, after: true }],
+    // Comma Style rule enforces styles for comma-separated lists
+    'comma-style': ['error', 'last'],
     // require newline at the end of files
     'eol-last': ['error', 'always'],
+    // require or disallow spacing between function identifiers and their invocations
+    'func-call-spacing': ['error', 'never'],
     // enforces spacing between keys and values in object literal properties
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
+    // disallow unnecessary semicolons
+    'no-extra-semi': 'error',
+    // disallow whitespace before properties: `foo .bar`
+    'no-whitespace-before-property': 'off',
     // require or disallow use of semicolons instead of ASI
     semi: ['error', 'always'],
+    // Enforce spacing before and after semicolons
+    'semi-spacing': ['error', {'before': false, 'after': true}],
+    // Enforce location of semicolons
+    'semi-style': ['error', 'last'],
+    // require spacing around infix operators, but allow no space for int32Hint
+    'space-infix-ops': ['error', { 'int32Hint': true }],
 
     // These are rules that you never need to enable when using Prettier.
     'array-bracket-newline': 'off',
     'array-bracket-spacing': 'off',
     'array-element-newline': 'off',
-    'arrow-parens': 'off',
+    // 'arrow-parens': 'off', // turn off in es6.js
     'arrow-spacing': 'off',
     'block-spacing': 'off',
     'brace-style': 'off',
-    'comma-style': 'off',
     'computed-property-spacing': 'off',
     'dot-location': 'off',
-    'func-call-spacing': 'off',
     'function-call-argument-newline': 'off',
     'function-paren-newline': 'off',
     'generator-star': 'off',
@@ -48,15 +60,12 @@ module.exports = {
     'new-parens': 'off',
     'no-arrow-condition': 'off',
     'no-extra-parens': 'off',
-    'no-extra-semi': 'off',
     'no-floating-decimal': 'off',
     'no-mixed-spaces-and-tabs': 'off',
     'no-multi-spaces': 'off',
     'no-multiple-empty-lines': 'off',
     'no-reserved-keys': 'off',
-    'no-space-before-semi': 'off',
     'no-trailing-spaces': 'off',
-    'no-whitespace-before-property': 'off',
     'no-wrap-func': 'off',
     'nonblock-statement-body-position': 'off',
     'object-curly-newline': 'off',
@@ -67,17 +76,9 @@ module.exports = {
     'padded-blocks': 'off',
     'quote-props': 'off',
     'rest-spread-spacing': 'off',
-    'semi-spacing': 'off',
-    'semi-style': 'off',
-    'space-after-function-name': 'off',
-    'space-after-keywords': 'off',
     'space-before-blocks': 'off',
     'space-before-function-paren': 'off',
-    'space-before-function-parentheses': 'off',
-    'space-before-keywords': 'off',
-    'space-in-brackets': 'off',
     'space-in-parens': 'off',
-    'space-infix-ops': 'off',
     'space-return-throw-case': 'off',
     'space-unary-ops': 'off',
     'space-unary-word-ops': 'off',

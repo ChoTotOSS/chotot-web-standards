@@ -361,5 +361,9 @@ module.exports = {
     // disallow useless backreferences in regular expressions
     // https://eslint.org/docs/rules/no-useless-backreference
     'no-useless-backreference': 'error',
+
+    // disallow use of optional chaining in contexts where the undefined value is not allowed
+    // https://eslint.org/docs/rules/no-unsafe-optional-chaining
+    'no-unsafe-optional-chaining': ['error', { 'disallowArithmeticOperators': true }],
   }
 };
