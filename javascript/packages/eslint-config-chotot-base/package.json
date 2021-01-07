@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-chotot-base",
-  "version": "15.1.0",
+  "version": "15.1.1",
   "description": "Chotot's base JS ESLint config, following our styleguide",
   "main": "index.js",
   "scripts": {
@@ -61,7 +61,7 @@
     "tape": "^5.0.1"
   },
   "peerDependencies": {
-    "eslint": "^6.7.0 || ^7.14.0",
+    "eslint": "^7.15.0",
     "eslint-plugin-import": "^2.18.2"
   },
   "engines": {
