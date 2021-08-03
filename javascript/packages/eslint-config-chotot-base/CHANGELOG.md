@@ -1,3 +1,9 @@
+15.2.0 / 2021-08-03
+
+- Upgrade `eslint`, `eslint-plugin-import`
+- Add `import/no-import-module-exports`, `import/no-relative-packages` rules
+- Relax `no-shadow`, add some allowed frequent callback names
+
 15.1.0 / 2020-12-08
 ===================
 

@@ -256,5 +256,14 @@ module.exports = {
       missingExports: true,
       unusedExports: true,
     }],
+
+    // Reports the use of import declarations with CommonJS exports in any module except for the main module.
+    // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-import-module-exports.md
+    'import/no-import-module-exports': 'error',
+
+    // Use this rule to prevent importing packages through relative paths.
+    // It's useful in Yarn/Lerna workspaces, were it's possible to import a sibling package using ../package relative path, while direct package is the correct one.
+    // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-relative-packages.md
+    'import/no-relative-packages': 'error',
   },
 };

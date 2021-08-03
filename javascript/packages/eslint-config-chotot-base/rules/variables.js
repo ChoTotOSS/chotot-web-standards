@@ -17,7 +17,7 @@ module.exports = {
     'no-restricted-globals': ['error', 'isFinite'].concat(confusingBrowserGlobals),
 
     // disallow declaration of variables already declared in the outer scope
-    'no-shadow': 'error',
+    'no-shadow': [ 'error', { builtinGlobals: false, hoist: 'functions', allow: [ 'callback', 'cb', 'data', 'done', 'err', 'error' ] } ],
 
     // disallow shadowing of names such as arguments
     'no-shadow-restricted-names': 'error',
