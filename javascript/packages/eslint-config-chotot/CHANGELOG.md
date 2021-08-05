@@ -1,3 +1,33 @@
+21.0.0 / 2021-08-06
+===================
+
+- Upgrade to `eslint` 7.32
+- Upgrade `eslint-config-chotot-base` to 16.0, `eslint-plugin-chotot` to 2.0
+- Rules for `eslint-plugin-chotot` are now defined in `eslint-config-chotot-base`
+- Added `eslint-plugin-next`
+- **BREAKING new rules**:
+    - `chotot/no-instanceof-array`
+    - `chotot/no-nested-ternary` (replace built-in `no-nested-ternary`)
+    - `chotot/no-this-assignment`
+    - `chotot/no-unsafe-regex`
+    - `chotot/no-unused-properties`
+    - `@next/next/no-document-import-in-page`
+    - `@next/next/no-head-import-in-document`
+    - `@next/next/no-page-custom-font`
+    - `@next/next/no-sync-scripts`
+    - `@next/next/no-unwanted-polyfillio`
+    - `react/jsx-no-constructed-context-values`
+    - `react/no-unstable-nested-components`
+- None breaking rules (just warning or turn off):
+    - `@next/next/google-font-display`
+    - `@next/next/google-font-preconnect`
+    - `@next/next/link-passhref`
+    - `@next/next/no-css-tags`
+    - `@next/next/no-html-link-for-pages`
+    - `@next/next/no-img-element`
+    - `@next/next/no-title-in-document-head`
+    - `react/jsx-newline`
+
 20.0.0 / 2020-12-08
 ===================
 

@@ -411,6 +411,7 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/require-default-props.md
     'react/require-default-props': ['error', {
       forbidDefaultForRequired: true,
+      ignoreFunctionalComponents: true,
     }],
 
     // Forbids using non-exported propTypes
@@ -520,6 +521,19 @@ module.exports = {
     // Enforce that props are read-only
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-read-only-props.md
     'react/prefer-read-only-props': 'off',
+
+    // DISABLED: This is a stylistic rule intended to make JSX code more readable by requiring or preventing lines between adjacent JSX elements and expressions.
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-newline.md
+    'react/jsx-newline': 'off',
+
+    // This rule prevents non-stable values (i.e. object identities) from being used as a value for Context.Provider.
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-constructed-context-values.md
+    'react/jsx-no-constructed-context-values': 'error',
+
+    // Creating components inside components without memoization leads to unstable components. The nested component and all
+    // its children are recreated during each re-render. Given stateful children of the nested component will lose their state on each re-render.
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unstable-nested-components.md
+    'react/no-unstable-nested-components': ['error', { allowAsProps: false }],
   },
 
   settings: {

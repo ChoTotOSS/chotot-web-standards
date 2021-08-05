@@ -1,7 +1,6 @@
 module.exports = {
   extends: [
     'eslint-config-chotot-base',
-    './rules/chotot',
     './rules/react',
     './rules/react-hooks',
     './rules/react-a11y',
