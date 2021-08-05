@@ -1,11 +1,10 @@
 {
   "name": "chotot-web-standards",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A mostly reasonable approach to JavaScript.",
+  "private": true,
+  "workspaces": ["packages/*"],
   "scripts": {
-    "preinstall": "npm run install:config && npm run install:config:base",
-    "install:config": "cd packages/eslint-config-chotot && npm prune && npm install",
-    "install:config:base": "cd packages/eslint-config-chotot-base && npm prune && npm install",
     "lint": "markdownlint --config linters/.markdownlint.json README.md */README.md",
     "pretest": "npm run --silent lint",
     "test": "npm run --silent test:config && npm run --silent test:config:base",
