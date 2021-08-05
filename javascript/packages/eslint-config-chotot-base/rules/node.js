@@ -1,3 +1,6 @@
+/**
+ * We will need to move these rules to `eslint-plugin-node` when upgrade to eslint@8+
+ */
 module.exports = {
   env: {
     node: true

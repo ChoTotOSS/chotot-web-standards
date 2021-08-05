@@ -261,8 +261,9 @@ module.exports = {
     // https://eslint.org/docs/rules/no-negated-condition
     'no-negated-condition': 'off',
 
+    // DISABLED in favor of `chotot/no-nested-ternary`
     // disallow nested ternary expressions
-    'no-nested-ternary': 'error',
+    'no-nested-ternary': 'off',
 
     // disallow use of the Object constructor
     'no-new-object': 'error',

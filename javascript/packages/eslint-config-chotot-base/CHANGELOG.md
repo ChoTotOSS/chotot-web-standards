@@ -1,4 +1,11 @@
+16.0.0 / 2021-08-05
+===================
+
+- Added `eslint-plugin-chotot` and its rules (moved from `eslint-config-chotot`)
+- Turn off `no-nested-ternary` in favor of `chotot/no-nested-ternary`
+
 15.2.0 / 2021-08-03
+===================
 
 - Upgrade `eslint`, `eslint-plugin-import`
 - Add `import/no-import-module-exports`, `import/no-relative-packages` rules

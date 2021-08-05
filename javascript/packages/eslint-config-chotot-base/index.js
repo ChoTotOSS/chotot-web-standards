@@ -1,5 +1,6 @@
 module.exports = {
   extends: [
+    './rules/chotot',
     './rules/best-practices',
     './rules/errors',
     './rules/node',
@@ -10,7 +11,7 @@ module.exports = {
     './rules/strict',
   ].map(require.resolve),
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2020,
     sourceType: 'module',
   },
   rules: {},
