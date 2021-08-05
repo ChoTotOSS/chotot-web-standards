@@ -39,15 +39,15 @@ function* switchNewExpressionToCallExpression(node, sourceCode, fixer) {
   }
 
   /*
-		Remove `new` from this code will makes the function return `undefined`
+    Remove `new` from this code will makes the function return `undefined`
 
-		```js
-			() => {
-				return new // comment
-					Foo()
-			}
-		```
-	*/
+    ```js
+      () => {
+        return new // comment
+          Foo()
+      }
+    ```
+  */
   yield* fixReturnStatementArgument(node, sourceCode, fixer);
 }
 

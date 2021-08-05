@@ -1,4 +1,11 @@
 {
   "extends": "../eslint-config-chotot-base/index.js",
-  "rules": {}
+  "rules": {
+    "consistent-return": 0,
+    "default-case": 0,
+    "import/no-dynamic-require": 0,
+    "no-shadow": 0,
+    "no-use-before-define": 0,
+    "strict": 0
+  }
 }

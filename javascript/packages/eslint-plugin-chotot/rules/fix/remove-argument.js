@@ -13,6 +13,7 @@ function removeArgument(fixer, node, sourceCode) {
   let [, end] = lastToken.range;
 
   if (index !== 0) {
+    // eslint-disable-next-line prefer-destructuring
     start = sourceCode.getTokenBefore(firstToken).range[0];
   }
 
@@ -21,6 +22,7 @@ function removeArgument(fixer, node, sourceCode) {
   if (callExpression.arguments.length === 1) {
     const tokenAfter = sourceCode.getTokenBefore(lastToken);
     if (isCommaToken(tokenAfter)) {
+      // eslint-disable-next-line prefer-destructuring
       end = tokenAfter[1];
     }
   }

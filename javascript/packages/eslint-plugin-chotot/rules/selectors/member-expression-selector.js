@@ -1,17 +1,18 @@
+/* eslint-disable prefer-const */
 'use strict';
 const matches = require('./matches-any.js');
 
 /**
 @param {
-	{
-		path?: string,
-		property?: string,
-		properties?: string[],
-		object?: string,
-		objects?: string[],
-		includeOptional?: boolean,
-		allowComputed?: boolean
-	} | string | string[]
+  {
+    path?: string,
+    property?: string,
+    properties?: string[],
+    object?: string,
+    objects?: string[],
+    includeOptional?: boolean,
+    allowComputed?: boolean
+  } | string | string[]
 } [options]
 @returns {string}
 */

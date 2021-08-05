@@ -1,5 +1,5 @@
 'use strict';
-const typedArray = require('../shared/typed-array.js');
+const typedArray = require('./typed-array.js');
 
 const enforceNew = [
   'Object',

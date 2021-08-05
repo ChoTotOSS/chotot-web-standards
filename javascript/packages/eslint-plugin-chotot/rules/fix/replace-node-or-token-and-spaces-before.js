@@ -13,7 +13,7 @@ function* replaceNodeOrTokenAndSpacesBefore(
   for (const token of tokens) {
     yield* replaceNodeOrTokenAndSpacesBefore(token, '', fixer, sourceCode, tokenStore);
   }
-
+  // eslint-disable-next-line prefer-const
   let [start, end] = nodeOrToken.range;
 
   const textBefore = sourceCode.text.slice(0, start);

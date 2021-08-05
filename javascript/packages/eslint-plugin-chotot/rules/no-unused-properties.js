@@ -1,3 +1,4 @@
+/* eslint-disable no-continue, object-shorthand */
 'use strict';
 const getScopes = require('./utils/get-scopes.js');
 

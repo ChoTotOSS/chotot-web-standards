@@ -26,7 +26,7 @@
   "scripts": {
     "prepublishOnly": "npm run lint && npm test",
     "test": "nyc ava",
-    "lint": "node ./test/lint/lint.js"
+    "lint": "eslint ."
   },
   "files": [
     "index.js",

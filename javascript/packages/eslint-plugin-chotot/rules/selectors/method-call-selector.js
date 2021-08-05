@@ -5,24 +5,24 @@ const { callExpressionSelector } = require('./call-or-new-expression-selector.js
 
 /**
 @param {
-	{
-		path?: string,
+  {
+    path?: string,
 
-		// `CallExpression` options
-		argumentsLength?: number,
-		minimumArguments?: number,
-		maximumArguments?: number,
-		includeOptionalCall?: boolean,
-		allowSpreadElement?: boolean,
+    // `CallExpression` options
+    argumentsLength?: number,
+    minimumArguments?: number,
+    maximumArguments?: number,
+    includeOptionalCall?: boolean,
+    allowSpreadElement?: boolean,
 
-		// `MemberExpression` options
-		method?: string,
-		methods?: string[],
-		object?: string,
-		objects?: string[],
-		includeOptionalMember?: boolean,
-		allowComputed?: boolean
-	} | string | string[]
+    // `MemberExpression` options
+    method?: string,
+    methods?: string[],
+    object?: string,
+    objects?: string[],
+    includeOptionalMember?: boolean,
+    allowComputed?: boolean
+  } | string | string[]
 } [options]
 @returns {string}
 */

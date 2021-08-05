@@ -6,12 +6,12 @@ const emptyObjectSelector = require('./empty-object-selector.js');
 
 /**
 @param {
-	{
-		path?: string,
-		object?: string,
-		method?: string,
-		methods?: string[],
-	}
+  {
+    path?: string,
+    object?: string,
+    method?: string,
+    methods?: string[],
+  }
 } [options]
 @returns {string}
 */

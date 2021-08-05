@@ -1,19 +1,20 @@
+/* eslint-disable prefer-const */
 'use strict';
 
 const matches = require('./matches-any.js');
 
 /**
 @typedef {
-	{
-		path?: string,
-		name?: string,
-		names?: string[],
-		argumentsLength?: number,
-		minimumArguments?: number,
-		maximumArguments?: number,
-		includeOptional?: boolean,
-		allowSpreadElement?: boolean,
-	} | string | string[]
+  {
+    path?: string,
+    name?: string,
+    names?: string[],
+    argumentsLength?: number,
+    minimumArguments?: number,
+    maximumArguments?: number,
+    includeOptional?: boolean,
+    allowSpreadElement?: boolean,
+  } | string | string[]
 } CallOrNewExpressionOptions
 */
 function create(options, types) {
