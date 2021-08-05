@@ -1,12 +1,6 @@
-import test from 'ava';
-import avaRuleTester from 'eslint-ava-rule-tester';
-import rule from '../rules/filename-case';
+import { getTester } from './utils/test.mjs';
 
-const ruleTester = avaRuleTester(test, {
-  env: {
-    es6: true,
-  },
-});
+const { test } = getTester(import.meta);
 
 function testCase(filename, chosenCase, errorMessage) {
   return testCaseWithOptions(filename, errorMessage, [{ case: chosenCase }]);
@@ -29,7 +23,7 @@ function testCaseWithOptions(filename, errorMessage, options = []) {
   };
 }
 
-ruleTester.run('filename-case', rule, {
+test({
   valid: [
     testCase('src/foo/bar.js', 'camelCase'),
     testCase('src/foo/fooBar.js', 'camelCase'),
@@ -65,7 +59,6 @@ ruleTester.run('filename-case', rule, {
     testCase('spec/Iss47Spec.js', 'pascalCase'),
     testCase('spec/Iss47.100Spec.js', 'pascalCase'),
     testCase('spec/I18n.js', 'pascalCase'),
-    testCase('spec/index.js', 'pascalCase'),
     testCase(undefined, 'camelCase'),
     testCase(undefined, 'snakeCase'),
     testCase(undefined, 'kebabCase'),
@@ -226,6 +219,13 @@ ruleTester.run('filename-case', rule, {
         ignore: [/FOOBAR\.js/u, /BaRbAz\.js/u],
       },
     ]),
+    // Ignored
+    ...['index.js', 'index.mjs', 'index.cjs', 'index.ts', 'index.tsx', 'index.vue'].flatMap(
+      (filename) =>
+        ['camelCase', 'snakeCase', 'kebabCase', 'pascalCase'].map((chosenCase) =>
+          testCase(filename, chosenCase)
+        )
+    ),
   ],
   invalid: [
     testCase(
@@ -234,7 +234,7 @@ ruleTester.run('filename-case', rule, {
       'Filename is not in kebab case. Rename it to `foo-bar.js`.'
     ),
     testCase(
-      'src/foo/foo_bar.js',
+      'src/foo/foo_bar.JS',
       'camelCase',
       'Filename is not in camel case. Rename it to `fooBar.js`.'
     ),
@@ -515,5 +515,40 @@ ruleTester.run('filename-case', rule, {
         },
       ]
     ),
+    // #1136
+    testManyCases(
+      'src/foo/1_.js',
+      {
+        camelCase: true,
+        pascalCase: true,
+        kebabCase: true,
+      },
+      'Filename is not in camel case, pascal case, or kebab case. Rename it to `1.js`.'
+    ),
+  ],
+});
+
+test.snapshot({
+  valid: [undefined, 'src/foo.JS/bar.js', 'src/foo.JS/bar'].map((filename) => ({
+    code: `const filename = ${JSON.stringify(filename)};`,
+    filename,
+  })),
+  invalid: [
+    {
+      code: 'foo();\n'.repeat(10),
+      filename: 'src/foo/foo_bar.mJS',
+      options: [
+        {
+          cases: {
+            camelCase: true,
+            kebabCase: true,
+          },
+        },
+      ],
+    },
+    ...['foo.JS', 'foo.Js', 'foo.jS', 'index.JS', 'foo..JS'].map((filename) => ({
+      code: `const filename = ${JSON.stringify(filename)};`,
+      filename,
+    })),
   ],
 });

@@ -30,7 +30,6 @@ Characters in the filename except `a-z`, `A-Z`, `0-9`, `-`, `_` and `$` are igno
 - `FooBar.Test.js`
 - `FooBar.TestUtils.js`
 
-
 ## Options
 
 ### case
@@ -78,6 +77,7 @@ When a string is given, it's interpreted as a regular expressions inside a strin
 Sometimes you may have non-standard filenames in a project. This option lets you ignore those files.
 
 For example:
+
 - Vendor packages that are not published and was copy-pasted.
 - Ignore some files when you use [eslint-plugin-markdown](https://github.com/eslint/eslint-plugin-markdown), for example `README.md`.
 - Some tools may require special names for some files.

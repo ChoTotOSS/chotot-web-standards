@@ -15,14 +15,22 @@ module.exports = {
       },
       plugins: ['chotot'],
       rules: {
-        'chotot/no-abusive-eslint-disable': 'error',
-        'chotot/filename-case': [ 'warn', {
-          cases: {
-            camelCase: true,
-            pascalCase: true,
-            kebabCase: true,
+        'chotot/filename-case': [
+          'warn',
+          {
+            cases: {
+              camelCase: true,
+              pascalCase: true,
+              kebabCase: true,
+            },
           },
-        }],
+        ],
+        'chotot/no-abusive-eslint-disable': 'error',
+        'chotot/no-instanceof-array': 'error',
+        'chotot/no-nested-ternary': 'error',
+        'chotot/no-this-assignment': 'error',
+        'chotot/no-unsafe-regex': 'error',
+        'chotot/no-unused-properties': 'error',
       },
     },
   },

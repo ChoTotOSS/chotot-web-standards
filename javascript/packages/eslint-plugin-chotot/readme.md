@@ -25,12 +25,10 @@ Configure it in `package.json`.
       "ecmaVersion": 2020,
       "sourceType": "module"
     },
-    "plugins": [
-      "chotot"
-    ],
+    "plugins": ["chotot"],
     "rules": {
       "chotot/filename-case": "error",
-      "chotot/no-abusive-eslint-disable": "error",
+      "chotot/no-abusive-eslint-disable": "error"
     }
   }
 }

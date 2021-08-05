@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-chotot",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Assorted custom Chotot ESLint rules",
   "license": "MIT",
   "repository": {
@@ -21,7 +21,7 @@
     }
   ],
   "engines": {
-    "node": ">=8"
+    "node": ">=12"
   },
   "scripts": {
     "prepublishOnly": "npm run lint && npm test",
@@ -42,31 +42,33 @@
     "style"
   ],
   "dependencies": {
-    "eslint-utils": "^2.0.0",
+    "eslint-utils": "^3.0.0",
     "import-modules": "^2.0.0",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "safe-regex": "^2.1.1"
   },
   "devDependencies": {
-    "@ava/babel": "^1.0.1",
-    "@typescript-eslint/parser": "^2.33.0",
+    "@ava/babel": "^2.0.0",
+    "@babel/eslint-parser": "^7.15.0",
+    "@typescript-eslint/parser": "^4.29.0",
     "ava": "^3.8.2",
     "babel-eslint": "^10.1.0",
     "chalk": "^4.0.0",
     "eslint": "^7.0.0",
     "eslint-ava-rule-tester": "^4.0.0",
-    "eslint-plugin-eslint-plugin": "^2.2.1",
-    "execa": "^4.0.1",
+    "eslint-plugin-eslint-plugin": "^3.5.3",
+    "execa": "^5.1.1",
     "nyc": "^15.0.1",
-    "outdent": "^0.7.1",
-    "typescript": "^3.9.2"
+    "outdent": "^0.8.0",
+    "typescript": "^4.3.5"
   },
   "peerDependencies": {
-    "eslint": ">=6.0.0"
+    "eslint": ">=7.0.0"
   },
   "ava": {
-    "babel": true,
     "files": [
-      "test/*.js"
+      "test/*.mjs",
+      "test/unit/*.mjs"
     ]
   },
   "nyc": {

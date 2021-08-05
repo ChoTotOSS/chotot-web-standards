@@ -1,22 +1,32 @@
-/**
- * Copyright (c) 2016 Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
- */
 'use strict';
 const path = require('path');
-const camelCase = require('lodash/camelCase');
-const kebabCase = require('lodash/kebabCase');
-const snakeCase = require('lodash/snakeCase');
-const upperFirst = require('lodash/upperFirst');
-const getDocumentationUrl = require('./utils/get-documentation-url');
-const cartesianProductSamples = require('./utils/cartesian-product-samples');
+const { camelCase, kebabCase, snakeCase, upperFirst } = require('lodash');
+const cartesianProductSamples = require('./utils/cartesian-product-samples.js');
+
+const MESSAGE_ID = 'filename-case';
+const MESSAGE_ID_EXTENSION = 'filename-extension';
+const messages = {
+  [MESSAGE_ID]: 'Filename is not in {{chosenCases}}. Rename it to {{renamedFilenames}}.',
+  [MESSAGE_ID_EXTENSION]:
+    'File extension `{{extension}}` is not in lowercase. Rename it to `{{filename}}`.',
+};
 
 const pascalCase = (string) => upperFirst(camelCase(string));
 const numberRegex = /\d+/;
 const PLACEHOLDER = '\uFFFF\uFFFF\uFFFF';
 const PLACEHOLDER_REGEX = new RegExp(PLACEHOLDER, 'i');
 const isIgnoredChar = (char) => !/^[a-z\d-_$]$/i.test(char);
+const ignoredByDefault = new Set([
+  'index.js',
+  'index.mjs',
+  'index.cjs',
+  'index.ts',
+  'index.tsx',
+  'index.vue',
+]);
+const isLowerCase = (string) => string === string.toLowerCase();
 
-function ignoreNumbers(fn) {
+function ignoreNumbers(caseFunction) {
   return (string) => {
     const stack = [];
     let execResult = numberRegex.exec(string);
@@ -27,7 +37,7 @@ function ignoreNumbers(fn) {
       execResult = numberRegex.exec(string);
     }
 
-    let withCase = fn(string);
+    let withCase = caseFunction(string);
 
     while (stack.length > 0) {
       withCase = withCase.replace(PLACEHOLDER_REGEX, stack.shift());
@@ -79,17 +89,21 @@ function getChosenCases(options) {
 function validateFilename(words, caseFunctions) {
   return words
     .filter(({ ignored }) => !ignored)
-    .every(({ word }) => caseFunctions.some((fn) => fn(word) === word));
+    .every(({ word }) => caseFunctions.some((caseFunction) => caseFunction(word) === word));
 }
 
 function fixFilename(words, caseFunctions, { leading, extension }) {
   const replacements = words.map(({ word, ignored }) =>
-    ignored ? [word] : caseFunctions.map((fn) => fn(word))
+    ignored ? [word] : caseFunctions.map((caseFunction) => caseFunction(word))
   );
 
   const { samples: combinations } = cartesianProductSamples(replacements);
 
-  return combinations.map((parts) => `${leading}${parts.join('')}${extension}`);
+  return [
+    ...new Set(
+      combinations.map((parts) => `${leading}${parts.join('')}${extension.toLowerCase()}`)
+    ),
+  ];
 }
 
 const leadingUnderscoresRegex = /^(?<leading>_+)(?<tailing>.*)$/;
@@ -135,9 +149,7 @@ function englishishJoinWords(words) {
     return `${words[0]} or ${words[1]}`;
   }
 
-  words = words.slice();
-  const last = words.pop();
-  return `${words.join(', ')}, or ${last}`;
+  return `${words.slice(0, -1).join(', ')}, or ${words[words.length - 1]}`;
 }
 
 const create = (context) => {
@@ -151,19 +163,19 @@ const create = (context) => {
     return new RegExp(item, 'u');
   });
   const chosenCasesFunctions = chosenCases.map((case_) => ignoreNumbers(cases[case_].fn));
-  const filenameWithExtension = context.getFilename();
+  const filenameWithExtension = context.getPhysicalFilename();
 
   if (filenameWithExtension === '<input>' || filenameWithExtension === '<text>') {
     return {};
   }
 
   return {
-    Program: (node) => {
+    Program() {
       const extension = path.extname(filenameWithExtension);
       const filename = path.basename(filenameWithExtension, extension);
       const base = filename + extension;
 
-      if (base === 'index.js' || ignore.some((regexp) => regexp.test(base))) {
+      if (ignoredByDefault.has(base) || ignore.some((regexp) => regexp.test(base))) {
         return;
       }
 
@@ -171,6 +183,14 @@ const create = (context) => {
       const isValid = validateFilename(words, chosenCasesFunctions);
 
       if (isValid) {
+        if (!isLowerCase(extension)) {
+          return {
+            loc: { column: 0, line: 1 },
+            messageId: MESSAGE_ID_EXTENSION,
+            data: { filename: filename + extension.toLowerCase(), extension },
+          };
+        }
+
         return;
       }
 
@@ -179,14 +199,16 @@ const create = (context) => {
         extension,
       });
 
-      context.report({
-        node,
-        messageId: chosenCases.length > 1 ? 'renameToCases' : 'renameToCase',
+      return {
+        // Report on first character like `unicode-bom` rule
+        // https://github.com/eslint/eslint/blob/8a77b661bc921c3408bae01b3aa41579edfc6e58/lib/rules/unicode-bom.js#L46
+        loc: { column: 0, line: 1 },
+        messageId: MESSAGE_ID,
         data: {
           chosenCases: englishishJoinWords(chosenCases.map((x) => cases[x].name)),
           renamedFilenames: englishishJoinWords(renamedFilenames.map((x) => `\`${x}\``)),
         },
-      });
+      };
     },
   };
 };
@@ -241,12 +263,9 @@ module.exports = {
   meta: {
     type: 'suggestion',
     docs: {
-      url: getDocumentationUrl(__filename),
+      description: 'Enforce a case style for filenames.',
     },
     schema,
-    messages: {
-      renameToCase: 'Filename is not in {{chosenCases}}. Rename it to {{renamedFilenames}}.',
-      renameToCases: 'Filename is not in {{chosenCases}}. Rename it to {{renamedFilenames}}.',
-    },
+    messages,
   },
 };
