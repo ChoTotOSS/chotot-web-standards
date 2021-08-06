@@ -36,13 +36,13 @@ const nonReferenceSelectors = [
   // `const foo = (Identifier) => {}`
   ':function > .params',
   /*
-    ```
-    Identifier: for (const foo of bar) {
-      continue Identifier;
-      break Identifier;
-    }
-    ```
-  */
+		```
+		Identifier: for (const foo of bar) {
+			continue Identifier;
+			break Identifier;
+		}
+		```
+	*/
   'LabeledStatement > .label',
   'ContinueStatement > .label',
   'BreakStatement > .label',

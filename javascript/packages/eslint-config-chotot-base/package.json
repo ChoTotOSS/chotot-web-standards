@@ -55,7 +55,7 @@
     "babel-tape-runner": "^3.0.0",
     "eslint": "^7.32.0",
     "eslint-find-rules": "^3.6.1",
-    "eslint-plugin-chotot": "^2.0.0",
+    "eslint-plugin-chotot": "^3.0.0",
     "eslint-plugin-import": "^2.23.4",
     "in-publish": "^2.0.1",
     "safe-publish-latest": "^1.1.3",
@@ -63,8 +63,8 @@
   },
   "peerDependencies": {
     "eslint": ">=7.32.0",
-    "eslint-plugin-import": ">=2.23.4",
-    "eslint-plugin-chotot": ">=2.0.0"
+    "eslint-plugin-chotot": ">=3.0.0",
+    "eslint-plugin-import": ">=2.23.4"
   },
   "engines": {
     "node": ">= 10"

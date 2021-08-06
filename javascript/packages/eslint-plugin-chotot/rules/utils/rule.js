@@ -47,6 +47,31 @@ function reportProblems(create) {
   return wrapped;
 }
 
+function checkVueTemplate(create, options) {
+  const { visitScriptBlock } = {
+    visitScriptBlock: true,
+    ...options,
+  };
+
+  create = reportProblems(create);
+
+  const wrapped = (context) => {
+    const listeners = create(context);
+
+    // `vue-eslint-parser`
+    if (context.parserServices && context.parserServices.defineTemplateBodyVisitor) {
+      return visitScriptBlock
+        ? context.parserServices.defineTemplateBodyVisitor(listeners, listeners)
+        : context.parserServices.defineTemplateBodyVisitor(listeners);
+    }
+
+    return listeners;
+  };
+
+  wrappedFunctions.add(wrapped);
+  return wrapped;
+}
+
 function loadRule(ruleId) {
   const rule = require(`../${ruleId}`);
 
@@ -80,4 +105,5 @@ function loadRules() {
 module.exports = {
   loadRule,
   loadRules,
+  checkVueTemplate,
 };

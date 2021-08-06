@@ -1,3 +1,7 @@
 # Try to keep file format the same with Airbnb
 javascript/packages/eslint-config-chotot/**
 javascript/packages/eslint-config-chotot-base/**
+
+# generated files
+coverage/**
+.nyc_output/**

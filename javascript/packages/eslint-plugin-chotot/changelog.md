@@ -1,4 +1,8 @@
-# 2.0.0 / 2021-08-05
+# 3.0.0 / 2021-08-06
+
+- Fix some rules not working
+
+# 2.0.0 / 2021-08-05 [unpublished]
 
 - Add 5 new rules:
   - `chotot/no-instanceof-array`

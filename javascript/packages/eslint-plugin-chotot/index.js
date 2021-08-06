@@ -1,9 +1,9 @@
 'use strict';
-const path = require('path');
-const importModules = require('import-modules');
+
+const { loadRules } = require('./rules/utils/rule.js');
 
 module.exports = {
-  rules: importModules(path.resolve(__dirname, 'rules'), { camelize: false }),
+  rules: loadRules(),
   configs: {
     recommended: {
       env: {

@@ -3,7 +3,6 @@
 function removeSpacesAfter(indexOrNode, sourceCode, fixer) {
   let index = indexOrNode;
   if (typeof indexOrNode === 'object' && Array.isArray(indexOrNode.range)) {
-    // eslint-disable-next-line prefer-destructuring
     index = indexOrNode.range[1];
   }
 

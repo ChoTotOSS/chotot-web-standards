@@ -11,25 +11,25 @@ If the name is dynamic, this returns `null`.
 
 For examples:
 
-  a.b      // => "b"
-  a["b"]    // => "b"
-  a['b']    // => "b"
-  a[`b`]    // => "b"
-  a[100]    // => "100"
-  a[b]      // => null
-  a["a" + "b"]  // => null
-  a[tag`b`]  // => null
-  a[`${b}`]  // => null
+	a.b		   // => "b"
+	a["b"]		// => "b"
+	a['b']		// => "b"
+	a[`b`]		// => "b"
+	a[100]		// => "100"
+	a[b]		  // => null
+	a["a" + "b"]  // => null
+	a[tag`b`]	 // => null
+	a[`${b}`]	 // => null
 
-  let a = {b: 1}      // => "b"
-  let a = {["b"]: 1}    // => "b"
-  let a = {['b']: 1}    // => "b"
-  let a = {[`b`]: 1}    // => "b"
-  let a = {[100]: 1}    // => "100"
-  let a = {[b]: 1}      // => null
-  let a = {["a" + "b"]: 1}  // => null
-  let a = {[tag`b`]: 1}  // => null
-  let a = {[`${b}`]: 1}  // => null
+	let a = {b: 1}			// => "b"
+	let a = {["b"]: 1}		// => "b"
+	let a = {['b']: 1}		// => "b"
+	let a = {[`b`]: 1}		// => "b"
+	let a = {[100]: 1}		// => "100"
+	let a = {[b]: 1}		  // => null
+	let a = {["a" + "b"]: 1}  // => null
+	let a = {[tag`b`]: 1}	 // => null
+	let a = {[`${b}`]: 1}	 // => null
 @param {ASTNode} node The node to get.
 @returns {string|undefined} The property name if static. Otherwise, undefined.
 */
@@ -97,10 +97,10 @@ function equalLiteralValue(left, right) {
 
 /**
 Check if two expressions reference the same value. For example:
-  a = a
-  a.b = a.b
-  a[0] = a[0]
-  a['b'] = a['b']
+	a = a
+	a.b = a.b
+	a[0] = a[0]
+	a['b'] = a['b']
 @param {ASTNode} left The left side of the comparison.
 @param {ASTNode} right The right side of the comparison.
 @returns {boolean} `true` if both sides match and reference the same value.
