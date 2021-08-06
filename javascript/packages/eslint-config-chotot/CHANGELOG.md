@@ -2,7 +2,7 @@
 ===================
 
 - Upgrade to `eslint` 7.32
-- Upgrade `eslint-config-chotot-base` to 16.0, `eslint-plugin-chotot` to 2.0
+- Upgrade `eslint-config-chotot-base` to 16.0, `eslint-plugin-chotot` to 3.0
 - Rules for `eslint-plugin-chotot` are now defined in `eslint-config-chotot-base`
 - Added `eslint-plugin-next`
 - **BREAKING new rules**:
