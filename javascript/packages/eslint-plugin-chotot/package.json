@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-chotot",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Assorted custom Chotot ESLint rules",
   "license": "MIT",
   "repository": {

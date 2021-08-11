@@ -1,3 +1,7 @@
+# 3.1.0 / 2021-08-11
+
+- Remove checking parentheses in `chotot/no-nested-ternary` rule since it conflicts with prettier.
+
 # 3.0.0 / 2021-08-06
 
 - Fix some rules not working
