@@ -1,3 +1,7 @@
+# 4.0.0 / 2022-03-17
+
+- Add `filepath-no-ads` rule to prevent ad blocker words
+
 # 3.1.0 / 2021-08-11
 
 - Remove checking parentheses in `chotot/no-nested-ternary` rule since it conflicts with prettier.

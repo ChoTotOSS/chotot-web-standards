@@ -25,6 +25,7 @@ module.exports = {
             },
           },
         ],
+        'chotot/filepath-no-ads': 'error',
         'chotot/no-abusive-eslint-disable': 'error',
         'chotot/no-instanceof-array': 'error',
         'chotot/no-nested-ternary': 'error',

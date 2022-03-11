@@ -39,7 +39,7 @@ Type: `string`
 You can set the `case` option like this:
 
 ```js
-"unicorn/filename-case": [
+"chotot/filename-case": [
 	"error",
 	{
 		"case": "kebabCase"
@@ -54,7 +54,7 @@ Type: `{[type: string]: boolean}`
 You can set the `cases` option to allow multiple cases:
 
 ```js
-"unicorn/filename-case": [
+"chotot/filename-case": [
 	"error",
 	{
 		"cases": {
@@ -85,7 +85,7 @@ For example:
 Don't forget that you must escape special characters that you don't want to be interpreted as part of the regex, for example, if you have `[` in the actual filename. For example, to match `[id].js`, use `/^\[id\]\.js$/"` or `'^\\[id\\]\\.js$'`.
 
 ```js
-"unicorn/filename-case": [
+"chotot/filename-case": [
 	"error",
 	{
 		"case": "kebabCase",
