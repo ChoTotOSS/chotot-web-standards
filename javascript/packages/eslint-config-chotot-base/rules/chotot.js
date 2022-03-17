@@ -12,8 +12,13 @@ module.exports = {
           pascalCase: true,
           kebabCase: true,
         },
+        ignore: ['CtC2C', 'C2C', 'JOB', 'VEH', 'PTY', 'GDS']
       },
     ],
+
+    // Prevent ad-blocker prone words
+    // https://github.com/ChoTotOSS/chotot-web-standards/blob/master/javascript/packages/eslint-plugin-chotot/docs/rules/filepath-no-ads.md
+    'chotot/filepath-no-ads': 'error',
 
     // Forbid the use of eslint-disable* without specific rule
     // https://github.com/ChoTotOSS/chotot-web-standards/blob/master/javascript/packages/eslint-plugin-chotot/docs/rules/no-abusive-eslint-disable.md
