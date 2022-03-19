@@ -5,7 +5,7 @@ module.exports = {
     './rules/react-hooks',
     './rules/react-a11y',
   ].map(require.resolve),
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
