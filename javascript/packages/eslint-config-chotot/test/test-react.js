@@ -1,26 +1,27 @@
 import test from 'tape';
-import { CLIEngine } from 'eslint';
+import { ESLint } from 'eslint';
 import eslintrc from '..';
 import nextRules from '../rules/next';
 import reactHookRules from '../rules/react-hooks';
 
-const cli = new CLIEngine({
+const eslint = new ESLint({
   useEslintrc: false,
   baseConfig: eslintrc,
 
-  rules: {
-    // It is okay to import devDependencies in tests.
-    'import/no-extraneous-dependencies': [2, { devDependencies: true }],
-    // this doesn't matter for tests
-    'lines-between-class-members': 0,
-  },
+  overrideConfig: {
+    rules: {
+      // It is okay to import devDependencies in tests.
+      'import/no-extraneous-dependencies': [2, { devDependencies: true }],
+      // this doesn't matter for tests
+      'lines-between-class-members': 0,
+    },
+  }
 });
 
-function lint(text) {
-  // @see https://eslint.org/docs/developer-guide/nodejs-api.html#executeonfiles
-  // @see https://eslint.org/docs/developer-guide/nodejs-api.html#executeontext
-  const linter = cli.executeOnText(text);
-  return linter.results[0];
+async function lint(text) {
+  // @see https://eslint.org/docs/developer-guide/nodejs-api#-eslintlinttextcode-options
+  const results = await eslint.lintText(text);
+  return results[0];
 }
 
 // tagged template string
@@ -42,9 +43,9 @@ test('next and react-hooks rules', (t) => {
 });
 
 test('react/no-unstable-nested-components', (t) => {
-  t.test('passes a good component', (t) => {
+  t.test('passes a good component', async (t) => {
     t.plan(3);
-    const result = lint(wrapModule`
+    const result = await lint(wrapModule`
 const SomeComponent = ({ footer: Footer }) => {
   return (
     <div>
@@ -65,9 +66,9 @@ export default Component;
     t.notOk(result.errorCount, 'no errors');
   });
 
-  t.test('passes a good component with renderprop', (t) => {
+  t.test('passes a good component with renderprop', async (t) => {
     t.plan(3);
-    const result = lint(wrapModule`
+    const result = await lint(wrapModule`
 const SomeComponent = ({ renderFooter }) => {
   return (
     <div>
@@ -92,9 +93,9 @@ export default Component;
     t.notOk(result.errorCount, 'no errors');
   });
 
-  t.test('renderprops used as component', (t) => {
+  t.test('renderprops used as component', async (t) => {
     t.plan(2);
-    const result = lint(wrapModule`
+    const result = await lint(wrapModule`
 const SomeComponent = ({ footer: Footer }) => {
   return (
     <div>
@@ -122,9 +123,9 @@ export default Component;
     );
   });
 
-  t.test('component created inside component', (t) => {
+  t.test('component created inside component', async (t) => {
     t.plan(2);
-    const result = lint(wrapModule`
+    const result = await lint(wrapModule`
 const Component = () => {
   const UnstableNestedComponent = () => {
     return <div />;
