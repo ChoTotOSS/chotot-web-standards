@@ -1,6 +1,5 @@
 'use strict';
 
-// eslint-disable-next-line import/no-unresolved
 const { singular: pluralizeSingular } = require('pluralize');
 
 /**

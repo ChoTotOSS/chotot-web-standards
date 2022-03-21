@@ -4,7 +4,7 @@ const {
   isIdentifierName,
   isStrictReservedWord,
   isKeyword,
-} = require('@babel/helper-validator-identifier'); // eslint-disable-line import/no-extraneous-dependencies
+} = require('@babel/helper-validator-identifier');
 const resolveVariableName = require('./resolve-variable-name.js');
 const getReferences = require('./get-references.js');
 
