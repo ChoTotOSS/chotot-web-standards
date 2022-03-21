@@ -1,3 +1,12 @@
+22.0.0 / 2022-03-21
+===================
+
+- **BREAKING:**
+    + Upgrade `eslint-plugin-chotot`@`4.0.0` with new `chotot/filepath-no-ads` rule
+    + Base config switch from `babel-eslint`(deprecated) to `@babel/eslint-parser`
+- Upgrade `eslint-config-chotot-base`@`17.0.0` with support for eslint 8
+- Upgrade `@next/eslint-plugin-next`@`12`
+
 21.0.0 / 2021-08-06
 ===================
 

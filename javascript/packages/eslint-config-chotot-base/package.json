@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-chotot-base",
-  "version": "17.0.0-rc.0",
+  "version": "17.0.0",
   "description": "Chotot's base JS ESLint config, following our styleguide",
   "main": "index.js",
   "scripts": {
@@ -55,7 +55,7 @@
     "babel-tape-runner": "^3.0.0",
     "eslint": "^8.11.0",
     "eslint-find-rules": "^4.1.0",
-    "eslint-plugin-chotot": "^4.0.0-rc",
+    "eslint-plugin-chotot": "^4.0.0",
     "eslint-plugin-import": "^2.25.4",
     "in-publish": "^2.0.1",
     "safe-publish-latest": "^2.0.0",
