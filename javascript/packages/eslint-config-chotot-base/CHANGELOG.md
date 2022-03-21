@@ -1,3 +1,10 @@
+17.1.0 / 2022-03-22
+===================
+
+- New rule `no-unused-private-class-members` (error)
+- New rule `prefer-object-has-own` (off)
+- Remove deprecated built-in  `node` rules
+
 17.0.0 / 2022-03-17
 ===================
 

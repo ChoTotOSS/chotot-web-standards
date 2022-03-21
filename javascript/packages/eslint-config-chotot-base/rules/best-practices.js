@@ -265,6 +265,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-unmodified-loop-condition
     'no-unmodified-loop-condition': 'off',
 
+
     // disallow usage of expressions in statement position
     'no-unused-expressions': ['error', {
       allowShortCircuit: false,
@@ -275,6 +276,10 @@ module.exports = {
     // disallow unused labels
     // https://eslint.org/docs/rules/no-unused-labels
     'no-unused-labels': 'error',
+
+    // Disallows unused private class members.
+    // https://eslint.org/docs/rules/no-unused-private-class-members#no-unused-private-class-members
+    'no-unused-private-class-members': 'error',
 
     // disallow unnecessary .call() and .apply()
     'no-useless-call': 'off',
@@ -312,6 +317,10 @@ module.exports = {
     // Suggest using named capture group in regular expression
     // https://eslint.org/docs/rules/prefer-named-capture-group
     'prefer-named-capture-group': 'off',
+
+    // Introduced in ES2022, Object.hasOwn() is a shorter alternative to Object.prototype.hasOwnProperty.call():
+    // https://eslint.org/docs/rules/prefer-object-has-own#prefer-object-has-own
+    'prefer-object-has-own': 'off',
 
     // https://eslint.org/docs/rules/prefer-regex-literals
     // TODO; enable, semver-minor, once eslint v6.4 is required (which is a major)

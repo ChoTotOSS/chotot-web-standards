@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-chotot-base",
-  "version": "17.0.0",
+  "version": "17.1.0",
   "description": "Chotot's base JS ESLint config, following our styleguide",
   "main": "index.js",
   "scripts": {
