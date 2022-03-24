@@ -1,11 +1,24 @@
 22.0.0 / 2022-03-21
 ===================
 
+- Upgrade `eslint-config-chotot-base`@`17.0.0` with support for eslint 8
+- Upgrade `@next/eslint-plugin-next`@`12`
 - **BREAKING:**
     + Upgrade `eslint-plugin-chotot`@`4.0.0` with new `chotot/filepath-no-ads` rule
     + Base config switch from `babel-eslint`(deprecated) to `@babel/eslint-parser`
-- Upgrade `eslint-config-chotot-base`@`17.0.0` with support for eslint 8
-- Upgrade `@next/eslint-plugin-next`@`12`
+- **BREAKING:** New rules in new eslint and plugins versions:
+    + `no-unused-private-class-members`
+    + `react/iframe-missing-sandbox`
+    + `react/no-invalid-html-attribute`
+    + `react/no-namespace`
+    + `react/no-unused-class-component-methods`
+    + `react/prefer-exact-props` (`warn`)
+- Non-breaking new rules (`off` initially):
+    + `prefer-object-has-own`
+    + `react/hook-use-state`
+    + `react/no-arrow-function-lifecycle`
+- Remove:
+    + `jsx-a11y/no-onchange`
 
 21.0.0 / 2021-08-06
 ===================

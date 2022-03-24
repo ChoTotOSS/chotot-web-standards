@@ -55,7 +55,7 @@
     "rules/**/*.js"
   ],
   "dependencies": {
-    "eslint-config-chotot-base": "^17.0.0"
+    "eslint-config-chotot-base": "^17.1.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",
@@ -78,7 +78,7 @@
   },
   "peerDependencies": {
     "@next/eslint-plugin-next": "^12.1.0",
-    "eslint": "^7.32.0 || ^8",
+    "eslint": "^7.32.0 || ^8.11",
     "eslint-plugin-chotot": "^4.0.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jsx-a11y": "^6.4.1",

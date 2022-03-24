@@ -14,6 +14,8 @@ const eslint = new ESLint({
       'import/no-extraneous-dependencies': [2, { devDependencies: true }],
       // this doesn't matter for tests
       'lines-between-class-members': 0,
+      // let's skip this in tests
+      'react/no-unused-class-component-methods': 0
     },
   }
 });
