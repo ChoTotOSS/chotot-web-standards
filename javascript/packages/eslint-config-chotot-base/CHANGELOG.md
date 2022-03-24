@@ -1,3 +1,17 @@
+17.1.0 / 2022-03-22
+===================
+
+- New rule `no-unused-private-class-members` (error)
+- New rule `prefer-object-has-own` (off)
+- Remove deprecated built-in  `node` rules
+
+17.0.0 / 2022-03-17
+===================
+
+- Upgrade `eslint-plugin-chotot` version to 4 with new `chotot/filepath-no-ads` rule
+- Add ignore config for `chotot/filename-case`  to ignore Chotot's category prefix
+- Add `tsx, ts, mjs` to test patterns in `import/no-extraneous-dependencies`
+
 16.0.0 / 2021-08-05
 ===================
 

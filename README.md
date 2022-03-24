@@ -24,10 +24,11 @@ Currently:
 yarn add --dev eslint-config-chotot@latest
 ```
 
-After adding `eslint-config-chotot` package to `devDependencies`, execute below command to check for peer dependencies and then install the exact version of the listed peer dependencies:
+After adding `eslint-config-chotot` package to `devDependencies`, execute below command to install peer dependencies automatically:
 
 ```sh
-npm info eslint-config-chotot@latest peerDependencies
+# yarn or npm will be detected automatically by `install-peerdeps`
+npx install-peerdeps --dev eslint-config-chotot@latest
 ```
 
 Create a `.eslintrc` at root of project with following content:
@@ -59,7 +60,7 @@ Then update `.eslintrc` with following config:
 
 ---
 
-© 2020 - Chotot.vn
+© 2020-2022 - Chotot.vn
 
 Code is licensed under [MIT license](https://opensource.org/licenses/MIT). Document is licensed under [Creative Commons Attribution-ShareAlike 4.0 International License.](http://creativecommons.org/licenses/by-sa/4.0/)
 

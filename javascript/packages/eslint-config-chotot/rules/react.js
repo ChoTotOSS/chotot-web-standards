@@ -70,6 +70,14 @@ module.exports = {
       unnamedComponents: 'arrow-function',
     }],
 
+    // This rule checks whether the value and setter variables destructured from a React.useState() call are named symmetrically.
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/hook-use-state.md
+    'react/hook-use-state': 'off',
+
+    // Enforce sandbox attribute on iframe elements
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/iframe-missing-sandbox.md
+    'react/iframe-missing-sandbox': 'error',
+
     // Enforce boolean attributes notation in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
     'react/jsx-boolean-value': ['error', 'never', { always: [] }],
@@ -189,6 +197,10 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-adjacent-inline-elements.md
     'react/no-adjacent-inline-elements': 'off',
 
+    // Lifecycle methods should be methods on the prototype, not class fields
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-arrow-function-lifecycle.md
+    'react/no-arrow-function-lifecycle': 'off',
+
     // Prevent usage of dangerous JSX properties
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger.md
     'react/no-danger': 'warn',
@@ -214,6 +226,10 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md
     'react/no-direct-mutation-state': 'off',
 
+    // Prevent usage of invalid attributes
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-invalid-html-attribute.md
+    'react/no-invalid-html-attribute': 'error',
+
     // Prevent usage of isMounted
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md
     'react/no-is-mounted': 'error',
@@ -221,6 +237,10 @@ module.exports = {
     // Prevent multiple component definition per file
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
     'react/no-multi-comp': 'off',
+
+    // Enforce that namespaces are not used in React elements
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-namespace.md
+    'react/no-namespace': 'error',
 
     // Prevent usage of setState
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md
@@ -237,6 +257,10 @@ module.exports = {
     // Require ES6 class declarations over React.createClass
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md
     'react/prefer-es6-class': ['error', 'always'],
+
+    // Prefer exact proptype definitions
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-exact-props.md
+    'react/prefer-exact-props': 'warn',
 
     // DISABLE: Require stateless functions when not using lifecycle methods, setState or ref
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
@@ -431,6 +455,10 @@ module.exports = {
     // Prevent usage of shouldComponentUpdate when extending React.PureComponent
     // https://github.com/yannickcr/eslint-plugin-react/blob/9e13ae2c51e44872b45cc15bf1ac3a72105bdd0e/docs/rules/no-redundant-should-component-update.md
     'react/no-redundant-should-component-update': 'error',
+
+    // Prevent declaring unused methods of component class
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-class-component-methods.md
+    'react/no-unused-class-component-methods': 'error',
 
     // Prevent unused state values
     // https://github.com/yannickcr/eslint-plugin-react/pull/1103/
