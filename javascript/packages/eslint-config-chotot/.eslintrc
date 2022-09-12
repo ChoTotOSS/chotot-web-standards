@@ -1,6 +1,6 @@
 {
   "root": true,
-  "extends": "./index.js",
+  "extends": ["./index.js", "./next.js"],
   "env": {
     "node": true
   },

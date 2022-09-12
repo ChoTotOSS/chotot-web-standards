@@ -35,10 +35,6 @@ module.exports = {
     // https://nextjs.org/docs/messages/google-font-preconnect
     '@next/next/google-font-preconnect': 'warn',
 
-    // Enforce passHref prop usage with custom Link components
-    // https://nextjs.org/docs/messages/link-passhref
-    '@next/next/link-passhref': 'warn',
-
     // Prevent manual stylesheet tags
     // https://nextjs.org/docs/messages/no-css-tags
     '@next/next/no-css-tags': 'warn',
