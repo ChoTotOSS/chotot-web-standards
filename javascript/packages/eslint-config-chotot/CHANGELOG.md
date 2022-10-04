@@ -1,3 +1,9 @@
+22.1.0 / 2022-09-12
+===================
+
+- Update for eslint 8.23, eslint-plugin-react 31.8, Next.js 12.3
+- Notably, remove the deprecated `@next/next/link-passhref` rule in @next/next/link-passhref
+
 22.0.0 / 2022-03-21
 ===================
 
