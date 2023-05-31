@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Chotot's ESLint config for Next.js application",
   "main": "index.js",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/ChoTotOSS/chotot-web-standards",

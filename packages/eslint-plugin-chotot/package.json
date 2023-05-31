@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Chotot's ESLint plugin",
   "main": "dist/index.js",
+  "license": "MIT",
   "repository": {
     "url": "https://github.com/ChoTotOSS/chotot-web-standards",
     "directory": "packages/eslint-plugin-chotot"
