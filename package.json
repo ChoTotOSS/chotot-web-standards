@@ -5,10 +5,12 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "lint": "turbo run lint"
+    "lint": "turbo run lint",
+    "prepare-release": "pnpm build",
+    "release": "pnpm prepare-release && changeset publish"
   },
   "author": "dev@chotot.vn",
-  "packageManager": "pnpm@8.5.1",
+  "packageManager": "pnpm@8.6.0",
   "devDependencies": {
     "@changesets/cli": "2.26.1",
     "@turbo/gen": "1.10.0",
