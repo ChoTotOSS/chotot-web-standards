@@ -27,3 +27,9 @@ package-lock.json
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+.turbo
+
+dist
+
+tsconfig.tsbuildinfo

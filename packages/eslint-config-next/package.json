@@ -1,0 +1,28 @@
+{
+  "name": "@chotot/eslint-config-next",
+  "version": "0.0.1",
+  "description": "Chotot's ESLint config for Next.js application",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChoTotOSS/chotot-web-standards",
+    "directory": "packages/eslint-config-next"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@chotot/eslint-plugin-chotot": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "5.59.7",
+    "eslint-config-next": "13.4.3"
+  },
+  "peerDependencies": {
+    "eslint": "^7.23.0 || ^8.0.0",
+    "typescript": ">=3.3.1"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  }
+}
