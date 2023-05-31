@@ -1,5 +1,11 @@
 # @chotot/eslint-config-next
 
+## 1.0.1
+
+### Patch Changes
+
+- c505fc2: turn off react/require-default-props for tsx because typescript will catch this for us
+
 ## 1.0.0
 
 ### Major Changes
