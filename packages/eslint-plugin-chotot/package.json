@@ -1,6 +1,6 @@
 {
   "name": "@chotot/eslint-plugin-chotot",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Chotot's ESLint plugin",
   "main": "dist/index.js",
   "license": "MIT",
