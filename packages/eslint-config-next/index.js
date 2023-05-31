@@ -1423,6 +1423,7 @@ module.exports = {
         'no-extra-semi': 'off',
         'no-loss-of-precision': 'off',
         'no-unused-vars': 'off',
+        "react/require-default-props": "off",
         // Require that function overload signatures be consecutive.
         // https://typescript-eslint.io/rules/adjacent-overload-signatures
         '@typescript-eslint/adjacent-overload-signatures': 'error',
