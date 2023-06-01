@@ -1603,14 +1603,16 @@ module.exports = {
         '@typescript-eslint/no-unnecessary-type-constraint': 'error',
         // Disallow calling a function with a value with type any.
         // https://typescript-eslint.io/rules/no-unsafe-argument
-        '@typescript-eslint/no-unsafe-argument': 'error',
+        // OFF: too strict
+        '@typescript-eslint/no-unsafe-argument': 'off',
         // Disallow assigning a value with type any to variables and properties.
         // https://typescript-eslint.io/rules/no-unsafe-assignment
         // OFF: too strict
         '@typescript-eslint/no-unsafe-assignment': 'off',
         // Disallow calling a value with type any.
         // https://typescript-eslint.io/rules/no-unsafe-call
-        '@typescript-eslint/no-unsafe-call': 'error',
+        // OFF: too strict
+        '@typescript-eslint/no-unsafe-call': 'off',
         // Disallow unsafe declaration merging.
         // https://typescript-eslint.io/rules/no-unsafe-declaration-merging
         '@typescript-eslint/no-unsafe-declaration-merging': 'error',
