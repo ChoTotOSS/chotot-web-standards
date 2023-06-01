@@ -1,5 +1,11 @@
 # @chotot/eslint-config-next
 
+## 1.1.0
+
+### Minor Changes
+
+- c521f33: turn off no-unsafe-call no-unsafe-argument
+
 ## 1.0.1
 
 ### Patch Changes
