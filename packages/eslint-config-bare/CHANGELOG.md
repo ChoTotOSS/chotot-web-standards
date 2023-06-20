@@ -1,5 +1,11 @@
 # @chotot/eslint-config-bare
 
+## 1.0.0
+
+### Major Changes
+
+- f1f9e3f: release 1.0.0
+
 ## 0.0.4
 
 ### Patch Changes
