@@ -1,5 +1,11 @@
 # @chotot/eslint-config-bare
 
+## 0.0.4
+
+### Patch Changes
+
+- 632c9f7: remove project tsconfig
+
 ## 0.0.3
 
 ### Patch Changes
