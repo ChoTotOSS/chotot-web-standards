@@ -61,7 +61,7 @@ module.exports = {
     'no-empty-function': [
       'error',
       {
-        allow: ['arrowFunctions', 'functions', 'methods'],
+        allow: ['arrowFunctions', 'functions', 'methods', 'constructors'],
       },
     ],
     // Disallow empty destructuring patterns
@@ -431,7 +431,7 @@ module.exports = {
     'no-useless-computed-key': 'error',
     // Disallow unnecessary constructors
     // https://eslint.org/docs/latest/rules/no-useless-constructor
-    'no-useless-constructor': 'error',
+    'no-useless-constructor': 'off',
     // Disallow renaming import, export, and destructured assignments to the same name
     // https://eslint.org/docs/latest/rules/no-useless-rename
     'no-useless-rename': [
@@ -1638,7 +1638,7 @@ module.exports = {
         '@typescript-eslint/non-nullable-type-assertion-style': 'error',
         // Require or disallow parameter properties in class constructors.
         // https://typescript-eslint.io/rules/parameter-properties
-        '@typescript-eslint/parameter-properties': 'error',
+        '@typescript-eslint/parameter-properties': 'off',
         // Enforce the use of as const over literal type.
         // https://typescript-eslint.io/rules/prefer-as-const
         '@typescript-eslint/prefer-as-const': 'error',
