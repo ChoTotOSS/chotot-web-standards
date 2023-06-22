@@ -1,5 +1,11 @@
 # @chotot/eslint-config-next
 
+## 1.1.1
+
+### Patch Changes
+
+- a05ccaf: adjust rules for supporting parameter property
+
 ## 1.1.0
 
 ### Minor Changes
