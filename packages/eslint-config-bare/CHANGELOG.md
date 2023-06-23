@@ -1,5 +1,11 @@
 # @chotot/eslint-config-bare
 
+## 1.0.1
+
+### Patch Changes
+
+- acaf0eb: bump typescript eslint plugin to 5.60.0
+
 ## 1.0.0
 
 ### Major Changes
