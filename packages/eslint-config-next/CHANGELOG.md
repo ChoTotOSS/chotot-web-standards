@@ -1,5 +1,11 @@
 # @chotot/eslint-config-next
 
+## 1.1.2
+
+### Patch Changes
+
+- acaf0eb: bump typescript eslint plugin to 5.60.0
+
 ## 1.1.1
 
 ### Patch Changes
