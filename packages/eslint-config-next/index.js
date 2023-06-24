@@ -1112,14 +1112,7 @@ module.exports = {
     'react/jsx-props-no-multi-spaces': 'error',
     // Disallow JSX props spreading
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
-    'react/jsx-props-no-spreading': [
-      'error',
-      {
-        html: 'enforce',
-        custom: 'enforce',
-        exceptions: [],
-      },
-    ],
+    'react/jsx-props-no-spreading': 'off',
     // Deprecated in favor of react/jsx-sort-props
     'react/jsx-sort-prop-types': 'off',
     // Validate whitespace in and around the JSX opening and closing brackets
