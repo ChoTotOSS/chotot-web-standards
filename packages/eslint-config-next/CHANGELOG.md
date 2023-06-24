@@ -1,5 +1,11 @@
 # @chotot/eslint-config-next
 
+## 1.1.3
+
+### Patch Changes
+
+- e254ef9: turn off jsx-props-no-spreading rule
+
 ## 1.1.2
 
 ### Patch Changes
