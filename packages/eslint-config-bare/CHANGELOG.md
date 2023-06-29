@@ -1,5 +1,11 @@
 # @chotot/eslint-config-bare
 
+## 1.0.3
+
+### Patch Changes
+
+- 033e1b3: turn off @typescript-eslint/no-confusing-void-expression
+
 ## 1.0.2
 
 ### Patch Changes

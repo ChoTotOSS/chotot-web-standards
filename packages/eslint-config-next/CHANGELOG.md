@@ -1,5 +1,11 @@
 # @chotot/eslint-config-next
 
+## 1.1.5
+
+### Patch Changes
+
+- 033e1b3: turn off @typescript-eslint/no-confusing-void-expression
+
 ## 1.1.4
 
 ### Patch Changes
