@@ -1,5 +1,11 @@
 # @chotot/eslint-config-next
 
+## 1.1.4
+
+### Patch Changes
+
+- 456a3bf: turn off @typescript-eslint/no-misused-promises
+
 ## 1.1.3
 
 ### Patch Changes
