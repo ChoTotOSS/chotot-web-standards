@@ -1,5 +1,11 @@
 # @chotot/eslint-config-bare
 
+## 1.0.2
+
+### Patch Changes
+
+- 456a3bf: turn off @typescript-eslint/no-misused-promises
+
 ## 1.0.1
 
 ### Patch Changes
