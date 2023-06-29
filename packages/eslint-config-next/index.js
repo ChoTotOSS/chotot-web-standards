@@ -1501,7 +1501,7 @@ module.exports = {
         '@typescript-eslint/no-confusing-non-null-assertion': 'error',
         // Require expressions of type void to appear in statement position.
         // https://typescript-eslint.io/rules/no-confusing-void-expression
-        '@typescript-eslint/no-confusing-void-expression': 'error',
+        '@typescript-eslint/no-confusing-void-expression': 'off',
         // Disallow duplicate enum member values.
         // https://typescript-eslint.io/rules/no-duplicate-enum-values
         '@typescript-eslint/no-duplicate-enum-values': 'error',
