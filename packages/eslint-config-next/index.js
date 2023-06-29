@@ -1546,7 +1546,7 @@ module.exports = {
         '@typescript-eslint/no-misused-new': 'error',
         // Disallow Promises in places not designed to handle them.
         // https://typescript-eslint.io/rules/no-misused-promises
-        '@typescript-eslint/no-misused-promises': 'error',
+        '@typescript-eslint/no-misused-promises': 'off',
         // Disallow enums from having both number and string members.
         // https://typescript-eslint.io/rules/no-mixed-enums
         '@typescript-eslint/no-mixed-enums': 'error',
