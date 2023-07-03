@@ -1,6 +1,6 @@
 {
   "name": "@chotot/eslint-config-next",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Chotot's ESLint config for Next.js application",
   "main": "index.js",
   "license": "MIT",

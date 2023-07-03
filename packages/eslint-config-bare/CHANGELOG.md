@@ -1,5 +1,11 @@
 # @chotot/eslint-config-bare
 
+## 1.0.4
+
+### Patch Changes
+
+- bc97b7c: bump version typescript eslint
+
 ## 1.0.3
 
 ### Patch Changes

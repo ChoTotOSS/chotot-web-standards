@@ -1,6 +1,6 @@
 {
   "name": "@chotot/eslint-config-bare",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Chotot's ESLint config for Typescript/Javascript application",
   "main": "index.js",
   "license": "MIT",
