@@ -1,5 +1,11 @@
 # @chotot/eslint-config-next
 
+## 1.1.6
+
+### Patch Changes
+
+- bc97b7c: bump version typescript eslint
+
 ## 1.1.5
 
 ### Patch Changes
