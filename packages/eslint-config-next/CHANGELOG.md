@@ -1,5 +1,11 @@
 # @chotot/eslint-config-next
 
+## 1.1.7
+
+### Patch Changes
+
+- 798b7cf: bump version
+
 ## 1.1.6
 
 ### Patch Changes
