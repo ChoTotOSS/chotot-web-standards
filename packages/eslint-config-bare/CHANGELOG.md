@@ -1,5 +1,11 @@
 # @chotot/eslint-config-bare
 
+## 1.0.5
+
+### Patch Changes
+
+- 798b7cf: bump version
+
 ## 1.0.4
 
 ### Patch Changes
