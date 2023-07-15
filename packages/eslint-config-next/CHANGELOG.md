@@ -1,5 +1,11 @@
 # @chotot/eslint-config-next
 
+## 1.2.1
+
+### Patch Changes
+
+- bf46a20: down version typescript eslint to 5.62.0
+
 ## 1.2.0
 
 ### Minor Changes
