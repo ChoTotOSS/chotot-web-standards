@@ -1082,7 +1082,7 @@ module.exports = {
     'react/jsx-no-duplicate-props': ['error', { ignoreCase: true }],
     // Disallow problematic leaked values from being rendered
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-leaked-render.md
-    'react/jsx-no-leaked-render': 'error',
+    'react/jsx-no-leaked-render': 'off',
     // Prevent usage of unwrapped JSX strings
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
     'react/jsx-no-literals': ['off', { noStrings: true }],
