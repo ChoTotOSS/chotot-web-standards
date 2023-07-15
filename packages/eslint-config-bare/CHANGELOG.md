@@ -1,5 +1,11 @@
 # @chotot/eslint-config-bare
 
+## 1.1.1
+
+### Patch Changes
+
+- bf46a20: down version typescript eslint to 5.62.0
+
 ## 1.1.0
 
 ### Minor Changes
