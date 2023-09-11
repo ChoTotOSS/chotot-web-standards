@@ -541,7 +541,14 @@ module.exports = {
     // Enforce camelcase naming convention
     // https://eslint.org/docs/latest/rules/camelcase
     // OFF: We use snake_case for our API
-    camelcase: ['off', { properties: 'never', ignoreDestructuring: false }],
+    camelcase: [
+      'error',
+      {
+        properties: 'never',
+        ignoreDestructuring: true,
+        ignoreGlobals: true,
+      },
+    ],
     // Require or disallow named function expressions
     // https://eslint.org/docs/latest/rules/func-names
     'func-names': 'warn',

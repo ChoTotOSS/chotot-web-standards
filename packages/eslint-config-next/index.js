@@ -547,8 +547,14 @@ module.exports = {
     'space-infix-ops': ['error', { int32Hint: true }],
     // Enforce camelcase naming convention
     // https://eslint.org/docs/latest/rules/camelcase
-    // OFF: We use snake_case for our API
-    camelcase: ['off', { properties: 'never', ignoreDestructuring: false }],
+    camelcase: [
+      'error',
+      {
+        properties: 'never',
+        ignoreDestructuring: true,
+        ignoreGlobals: true,
+      },
+    ],
     // Require or disallow named function expressions
     // https://eslint.org/docs/latest/rules/func-names
     'func-names': 'warn',
@@ -792,7 +798,7 @@ module.exports = {
     'jsx-a11y/click-events-have-key-events': 'error',
     // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/control-has-associated-label.md
     'jsx-a11y/control-has-associated-label': [
-      'off',
+      'error',
       {
         ignoreElements: ['audio', 'canvas', 'embed', 'input', 'textarea', 'tr', 'video'],
         ignoreRoles: [
@@ -1082,13 +1088,13 @@ module.exports = {
     'react/jsx-no-duplicate-props': ['error', { ignoreCase: true }],
     // Disallow problematic leaked values from being rendered
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-leaked-render.md
-    'react/jsx-no-leaked-render': 'off',
+    'react/jsx-no-leaked-render': 'error',
     // Prevent usage of unwrapped JSX strings
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
     'react/jsx-no-literals': ['off', { noStrings: true }],
     // Disallow target="_blank" on links
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
-    'react/jsx-no-target-blank': ['off', { enforceDynamicLinks: 'always' }],
+    'react/jsx-no-target-blank': ['error', { enforceDynamicLinks: 'always' }],
     // Disallow undeclared variables in JSX
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
     'react/jsx-no-undef': 'error',
@@ -1219,7 +1225,7 @@ module.exports = {
     'react/no-unescaped-entities': 'error',
     // Prevent usage of unknown DOM property
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md
-    'react/no-unknown-property': 'off',
+    'react/no-unknown-property': 'error',
     // Prevent usage of UNSAFE_ methods
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-unsafe.md
     'react/no-unsafe': 'off',
@@ -1416,7 +1422,7 @@ module.exports = {
         'no-extra-semi': 'off',
         'no-loss-of-precision': 'off',
         'no-unused-vars': 'off',
-        "react/require-default-props": "off",
+        'react/require-default-props': 'off',
         // Require that function overload signatures be consecutive.
         // https://typescript-eslint.io/rules/adjacent-overload-signatures
         '@typescript-eslint/adjacent-overload-signatures': 'error',
