@@ -1,5 +1,11 @@
 # @chotot/eslint-config-bare
 
+## 1.2.0
+
+### Minor Changes
+
+- f3c8200: turn on rules camelcase jsx-a11y/control-has-associated-label react/jsx-no-leaked-render react/jsx-no-target-blank react/no-unknown-property
+
 ## 1.1.1
 
 ### Patch Changes
