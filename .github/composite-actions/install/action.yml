@@ -1,0 +1,27 @@
+name: 'Install'
+description: 'Sets up Node.js and runs install'
+
+runs:
+  using: composite
+  steps:
+    - name: Install pnpm
+      uses: pnpm/action-setup@v2
+      id: pnpm-install
+      with:
+        run_install: false
+
+    - name: Setup node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version-file: '.nvmrc'
+        cache: 'pnpm'
+
+    - name: Install dependencies
+      shell: bash -ieo pipefail {0}
+      run: |
+        cat << EOF > "$HOME/.npmrc"
+          //registry.npmjs.org/:_authToken=$NPM_TOKEN
+        EOF
+        pnpm install
+      env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

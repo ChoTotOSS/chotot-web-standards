@@ -1,27 +1,30 @@
-name: Release
+name: Release Canary
 
 on:
   push:
     branches:
-      - main
+      - canary
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   release:
-    name: Release
+    name: Release Canary
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
+      - name: Checkout
         uses: actions/checkout@v3
 
       - name: Install
         uses: ./.github/composite-actions/install
 
-      - name: Create Release Pull Request
-        uses: changesets/action@v1
-        with:
-          publish: pnpm release
+      - name: Build
+        run: |
+          pnpm build
+
+      - name: Release Canary
+        run: |
+          pnpm release:canary
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
