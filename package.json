@@ -7,10 +7,13 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "prepare-release": "pnpm build",
-    "release": "pnpm prepare-release && changeset publish"
+    "release": "pnpm prepare-release && changeset publish",
+    "release:canary": "pnpm version:canary && pnpm publish:canary",
+    "version:canary": "changeset version --snapshot canary",
+    "publish:canary": "changeset publish --tag canary",
   },
   "author": "dev@chotot.vn",
-  "packageManager": "pnpm@8.6.0",
+  "packageManager": "pnpm@8.7.4",
   "devDependencies": {
     "@changesets/cli": "2.26.1",
     "@turbo/gen": "1.10.0",
