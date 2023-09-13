@@ -787,7 +787,7 @@ const importPluginRules = {
   'import/default': 'error',
 };
 
-export const reactJSXA11yPluginRules = {
+const reactJSXA11yPluginRules = {
   // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/alt-text.md
   'jsx-a11y/alt-text': 'error',
   // Enforces <a> values are not exact matches for the phrases "click here", "here", "link", "a link", or "learn more".
@@ -937,7 +937,7 @@ export const reactJSXA11yPluginRules = {
   'jsx-a11y/tabindex-no-positive': 'error',
 };
 
-export const reactPluginRules = {
+const reactPluginRules = {
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
   'react/jsx-sort-props': [
     'off',
@@ -1410,7 +1410,7 @@ const nextPluginRules = {
   '@next/next/no-sync-scripts': 'error',
 };
 
-export const typescriptEslintPluginRules = {
+const typescriptEslintPluginRules = {
   // disables rules from eslint:recommended which are already handled by TypeScript.
   // enables rules that make sense due to TS's typechecking / transpilation.
   'constructor-super': 'off', // ts(2335) & ts(2377)
@@ -1776,5 +1776,5 @@ module.exports = {
   reactPluginRules,
   reactHooksPluginRules,
   nextPluginRules,
-  typescriptEslintPluginRules
+  typescriptEslintPluginRules,
 };
