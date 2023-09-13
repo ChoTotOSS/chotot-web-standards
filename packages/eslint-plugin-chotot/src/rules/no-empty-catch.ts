@@ -8,7 +8,7 @@ import { defineRule } from '../utils/define-rule';
 export = defineRule({
   meta: {
     messages: {
-      emptyCatch: 'Empty catch block is not allowed. Please do something with the error.',
+      emptyCatch: 'Empty catch block is not allowed.. Please do something with the error.',
     },
   },
   create(context) {
