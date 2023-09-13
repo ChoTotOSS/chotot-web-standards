@@ -1,5 +1,11 @@
 # @chotot/eslint-plugin-chotot
 
+## 1.1.0
+
+### Minor Changes
+
+- 8cecd4d: share ruleset
+
 ## 1.0.0
 
 ### Major Changes
