@@ -1,5 +1,18 @@
 # @chotot/eslint-config-next
 
+## 1.4.0
+
+### Minor Changes
+
+- 8cecd4d: share ruleset
+
+### Patch Changes
+
+- Updated dependencies [8cecd4d]
+- Updated dependencies [8cecd4d]
+  - @chotot/eslint-ruleset@1.0.0
+  - @chotot/eslint-plugin-chotot@1.1.0
+
 ## 1.3.0
 
 ### Minor Changes

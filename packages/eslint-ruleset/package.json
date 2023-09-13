@@ -1,6 +1,6 @@
 {
   "name": "@chotot/eslint-ruleset",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Chotot's Set of Rules for ESLint",
   "main": "src/index.js",
   "license": "MIT",
