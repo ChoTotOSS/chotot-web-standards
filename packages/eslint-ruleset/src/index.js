@@ -1437,7 +1437,6 @@ const typescriptEslintPluginRules = {
   'no-array-constructor': 'off',
   'no-extra-semi': 'off',
   'no-loss-of-precision': 'off',
-  'no-unused-vars': 'off',
   'no-shadow': 'off',
   // Require that function overload signatures be consecutive.
   // https://typescript-eslint.io/rules/adjacent-overload-signatures
