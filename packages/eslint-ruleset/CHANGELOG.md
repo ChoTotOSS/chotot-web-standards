@@ -1,5 +1,11 @@
 # @chotot/eslint-ruleset
 
+## 1.0.1
+
+### Patch Changes
+
+- 71d19a5: turn on no-unused-var
+
 ## 1.0.0
 
 ### Major Changes

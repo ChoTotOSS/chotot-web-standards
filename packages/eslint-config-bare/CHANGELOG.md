@@ -1,5 +1,12 @@
 # @chotot/eslint-config-bare
 
+## 1.3.1
+
+### Patch Changes
+
+- Updated dependencies [71d19a5]
+  - @chotot/eslint-ruleset@1.0.1
+
 ## 1.3.0
 
 ### Minor Changes
