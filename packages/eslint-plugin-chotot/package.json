@@ -16,8 +16,10 @@
     "dist"
   ],
   "dependencies": {
-    "safe-regex": "2.1.1",
-    "@eslint-community/eslint-utils": "4.4.0"
+    "@eslint-community/eslint-utils": "4.4.0",
+    "@types/node": "^20.6.0",
+    "lodash": "4.17.21",
+    "safe-regex": "2.1.1"
   },
   "devDependencies": {
     "@swc/cli": "0.1.62",
