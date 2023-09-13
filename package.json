@@ -10,7 +10,7 @@
     "release": "pnpm prepare-release && changeset publish",
     "release:canary": "pnpm version:canary && pnpm publish:canary",
     "version:canary": "changeset version --snapshot canary",
-    "publish:canary": "changeset publish --tag canary",
+    "publish:canary": "changeset publish --tag canary"
   },
   "author": "dev@chotot.vn",
   "packageManager": "pnpm@8.7.4",
