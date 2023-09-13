@@ -6,6 +6,7 @@ module.exports = {
     'no-unsafe-regex': require('./rules/no-unsafe-regex'),
     'no-instanceof-array': require('./rules/no-instanceof-array'),
     'filename-case': require('./rules/filename-case'),
+    'no-nested-ternary': require('./rules/no-nested-ternary'),
   },
   configs: {
     recommended: {
@@ -16,6 +17,8 @@ module.exports = {
         '@chotot/chotot/no-abusive-eslint-disable': 'error',
         '@chotot/chotot/no-unsafe-regex': 'error',
         '@chotot/chotot/no-instanceof-array': 'error',
+        '@chotot/chotot/filename-case': 'error',
+        '@chotot/chotot/no-nested-ternary': 'error',
       },
     },
   },
