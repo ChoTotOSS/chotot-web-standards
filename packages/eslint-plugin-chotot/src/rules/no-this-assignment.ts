@@ -32,7 +32,19 @@ export = defineRule({
 		messages,
   },
   create(context) {
-    context.on('VariableDeclarator', node => getProblem(node.id, node.init));
-	  context.on('AssignmentExpression', node => getProblem(node.left, node.right));
+    return {
+      VariableDeclarator(node) {
+        const prob = getProblem(node.id, node.init);
+        if (prob) {
+          context.report(prob);
+        }
+      },
+      AssignmentExpression(node) {
+        const prob = getProblem(node.left, node.right);
+        if (prob) {
+          context.report(prob);
+        }
+      },
+    }
   },
 });
