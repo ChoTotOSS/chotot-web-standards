@@ -12,30 +12,26 @@ jobs:
     name: Release Canary
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Repo
         uses: actions/checkout@v3
-
-      - name: Install pnpm
+      - name: PNPM setup
         uses: pnpm/action-setup@v2
-        id: pnpm-install
         with:
-          run_install: false
-
-      - name: Setup node.js
+          version: 8.6.0
+      - name: Setup Node.js 16.x
         uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
+          node-version: 16
           cache: 'pnpm'
-
-      - name: Install dependencies
-        shell: bash -ieo pipefail {0}
+      - name: Creating .npmrc
         run: |
           cat << EOF > "$HOME/.npmrc"
             //registry.npmjs.org/:_authToken=$NPM_TOKEN
           EOF
-          pnpm install
         env:
-            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Install Dependencies
+        run: pnpm install
 
       - name: Build
         run: |
