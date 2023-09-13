@@ -5,6 +5,7 @@ module.exports = {
     'no-abusive-eslint-disable': require('./rules/no-abusive-eslint-disable'),
     'no-unsafe-regex': require('./rules/no-unsafe-regex'),
     'no-instanceof-array': require('./rules/no-instanceof-array'),
+    'filename-case': require('./rules/filename-case'),
   },
   configs: {
     recommended: {
