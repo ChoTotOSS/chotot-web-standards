@@ -36,7 +36,7 @@ export = defineRule({
         const nestLevel = ancestors.findIndex((node) => node.type !== 'ConditionalExpression');
 
         if (nestLevel === 1 && !isParenthesized(node, sourceCode)) {
-          return context.repot({
+          return context.report({
             node,
             messageId: MESSAGE_ID_SHOULD_PARENTHESIZED,
             fix: (fixer) => [fixer.insertTextBefore(node, '('), fixer.insertTextAfter(node, ')')],
