@@ -2,12 +2,15 @@ const {
   chototPluginRules,
   eslintBuiltInRules,
   importPluginRules,
+  typescriptEslintPluginRules,
+} = require('@chotot/eslint-config-base');
+
+const {
   reactJSXA11yPluginRules,
   reactPluginRules,
   reactHooksPluginRules,
   nextPluginRules,
-  typescriptEslintPluginRules
-} = require('@chotot/eslint-ruleset');
+} = require('./rulesets');
 
 /* eslint-env node */
 module.exports = {
@@ -28,7 +31,7 @@ module.exports = {
     ...reactJSXA11yPluginRules,
     ...reactPluginRules,
     ...reactHooksPluginRules,
-    ...nextPluginRules
+    ...nextPluginRules,
   },
   overrides: [
     {
@@ -37,7 +40,7 @@ module.exports = {
         project: ['./tsconfig.json'], // Specify it only for TypeScript files
       },
       rules: {
-        ...typescriptEslintPluginRules
+        ...typescriptEslintPluginRules,
       },
     },
   ],
