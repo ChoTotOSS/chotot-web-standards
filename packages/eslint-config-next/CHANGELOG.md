@@ -1,5 +1,16 @@
 # @chotot/eslint-config-next
 
+## 1.5.0
+
+### Minor Changes
+
+- 2ca3014: change structures, chotot-next depends on chotot-base
+
+### Patch Changes
+
+- Updated dependencies [2ca3014]
+  - @chotot/eslint-config-base@1.4.0
+
 ## 1.4.1
 
 ### Patch Changes

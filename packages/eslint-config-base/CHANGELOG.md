@@ -1,5 +1,11 @@
 # @chotot/eslint-config-bare
 
+## 1.4.0
+
+### Minor Changes
+
+- 2ca3014: change structures, chotot-next depends on chotot-base
+
 ## 1.3.1
 
 ### Patch Changes
