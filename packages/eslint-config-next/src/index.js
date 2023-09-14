@@ -3,7 +3,7 @@ const {
   eslintBuiltInRules,
   importPluginRules,
   typescriptEslintPluginRules,
-} = require('@chotot/eslint-config-base');
+} = require('@chotot/eslint-config-base/src/rulesets');
 
 const {
   reactJSXA11yPluginRules,
