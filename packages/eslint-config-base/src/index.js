@@ -6,7 +6,7 @@ const {
   eslintBuiltInRules,
   importPluginRules,
   typescriptEslintPluginRules,
-} = require('@chotot/eslint-ruleset');
+} = require('./rulesets');
 
 module.exports = {
   root: true,

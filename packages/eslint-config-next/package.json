@@ -2,7 +2,7 @@
   "name": "@chotot/eslint-config-next",
   "version": "1.4.1",
   "description": "Chotot's ESLint config for Next.js application",
-  "main": "index.js",
+  "main": "src/index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -10,10 +10,11 @@
     "directory": "packages/eslint-config-next"
   },
   "files": [
-    "index.js"
+    "src"
   ],
   "dependencies": {
     "@chotot/eslint-plugin-chotot": "workspace:*",
+    "@chotot/eslint-config-base": "workspace:*",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "eslint-config-next": "13.4.8",
     "@chotot/eslint-ruleset": "workspace:*"
