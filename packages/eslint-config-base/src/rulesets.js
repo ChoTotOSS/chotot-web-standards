@@ -1143,3 +1143,10 @@ const typescriptEslintPluginRules = {
   // https://typescript-eslint.io/rules/no-empty-function
   '@typescript-eslint/no-empty-function': 'off',
 };
+
+module.exports = {
+  chototPluginRules,
+  eslintBuiltInRules,
+  importPluginRules,
+  typescriptEslintPluginRules,
+};
