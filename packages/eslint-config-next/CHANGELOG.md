@@ -1,5 +1,12 @@
 # @chotot/eslint-config-next
 
+## 1.5.1
+
+### Patch Changes
+
+- Updated dependencies [bcde0a0]
+  - @chotot/eslint-config-base@1.4.1
+
 ## 1.5.0
 
 ### Minor Changes

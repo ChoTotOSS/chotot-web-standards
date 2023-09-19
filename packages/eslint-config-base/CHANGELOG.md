@@ -1,5 +1,11 @@
 # @chotot/eslint-config-bare
 
+## 1.4.1
+
+### Patch Changes
+
+- bcde0a0: fix: missing exports
+
 ## 1.4.0
 
 ### Minor Changes
