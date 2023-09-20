@@ -815,6 +815,7 @@ const typescriptEslintPluginRules = {
   'no-extra-semi': 'off',
   'no-loss-of-precision': 'off',
   'no-shadow': 'off',
+  'no-unused-vars': 'off',
   // Require that function overload signatures be consecutive.
   // https://typescript-eslint.io/rules/adjacent-overload-signatures
   '@typescript-eslint/adjacent-overload-signatures': 'error',
@@ -1138,7 +1139,7 @@ const typescriptEslintPluginRules = {
   '@typescript-eslint/no-loss-of-precision': 'error',
   // Disallow unused variables.
   // https://typescript-eslint.io/rules/no-unused-vars
-  '@typescript-eslint/no-unused-vars': 'warn',
+  '@typescript-eslint/no-unused-vars': 'error',
   // Disallow empty functions.
   // https://typescript-eslint.io/rules/no-empty-function
   '@typescript-eslint/no-empty-function': 'off',
