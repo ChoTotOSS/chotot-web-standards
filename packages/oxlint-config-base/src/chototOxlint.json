@@ -1,0 +1,55 @@
+{
+    "plugins": [
+        "typescript",
+        "import"
+    ],
+    "ignorePatterns": [
+        "node_modules/*",
+        "**/build/**/*",
+        "**/dist/**/*",
+        "node_modules/**/*",
+        "coverage",
+        "public"
+    ],
+    "env": {
+        "browser": true,
+        "node": true,
+        "jest": true,
+        "es6": true
+    },
+    "rules": {
+        "ban-ts-comment": "error",
+        "no-array-constructor": "error",
+        "no-empty-object-type": "error",
+        "no-explicit-any": "error",
+        "no-misused-promises": "error",
+        "no-namespace": "error",
+        "no-require-imports": "error",
+        "no-unnecessary-type-assertion": "error",
+        "no-unnecessary-type-constraint": "error",
+        "no-unsafe-argument": "error",
+        "no-unsafe-assignment": "error",
+        "no-unsafe-call": "error",
+        "no-unsafe-enum-comparison": "error",
+        "no-unsafe-function-type": "error",
+        "no-unsafe-member-access": "error",
+        "no-unsafe-return": "error",
+        "no-unused-expressions": "error",
+        "no-unused-vars": "error",
+        "only-throw-error": "error",
+        "prefer-namespace-keyword": "error",
+        "prefer-promise-reject-errors": "error",
+        "require-await": "error",
+        "restrict-plus-operands": "error",
+
+        
+        "getter-return": "error",
+        "no-fallthrough": "error",
+        "no-prototype-builtins": "error",
+        "no-unexpected-multiline": "error",
+        "no-unreachable": "error",
+        "no-case-declarations": "error",
+        "no-redeclare": "error",
+        "no-regex-spaces": "error"
+    }
+}
