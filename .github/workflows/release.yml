@@ -4,6 +4,11 @@ on:
     branches:
       - main
 concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+permissions:
+  contents: write        # needed for git push / creating tags
+  pull-requests: write   # needed to update PRs (title, body, labels, comments)
+
 jobs:
   release:
     name: Release
@@ -34,5 +39,5 @@ jobs:
         with:
           publish: pnpm release
         env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
