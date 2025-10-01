@@ -1,5 +1,12 @@
 # @chotot/eslint-config-bare
 
+## 1.4.2
+
+### Patch Changes
+
+- 76439fd: turn off no-unused-vars for ts file, this is handled by typescript-eslint plugin, also make it error instead of warning
+- f2b0196: increase minimum peer dep eslint to "eslint": ">=8.49.0"
+
 ## 1.4.1
 
 ### Patch Changes
