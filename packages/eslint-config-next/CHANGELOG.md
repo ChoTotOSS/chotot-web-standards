@@ -1,5 +1,14 @@
 # @chotot/eslint-config-next
 
+## 1.5.2
+
+### Patch Changes
+
+- f2b0196: increase minimum peer dep eslint to "eslint": ">=8.49.0"
+- Updated dependencies [76439fd]
+- Updated dependencies [f2b0196]
+  - @chotot/eslint-config-base@1.4.2
+
 ## 1.5.1
 
 ### Patch Changes
