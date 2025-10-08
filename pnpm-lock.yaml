@@ -100,7 +100,7 @@ importers:
         specifier: 8.38.0
         version: 8.38.0
 
-  packages/oxlint-config-base:
+  packages/oxlint-config:
     dependencies:
       oxlint:
         specifier: ^1.13.0
