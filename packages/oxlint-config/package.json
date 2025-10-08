@@ -1,6 +1,6 @@
 {
   "name": "@chotot/oxlint-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Chotot's Oxlint config for Typescript/Javascript application",
   "main": "src/base.json",
   "license": "MIT",
