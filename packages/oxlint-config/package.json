@@ -1,13 +1,16 @@
 {
-  "name": "@chotot/oxlint-config-base",
-  "version": "1.0.1",
+  "name": "@chotot/oxlint-config",
+  "version": "0.0.1",
   "description": "Chotot's Oxlint config for Typescript/Javascript application",
-  "main": "src/chototOxlint.json",
+  "main": "src/base.json",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/ChoTotOSS/chotot-web-standards",
-    "directory": "packages/oxlint-config-base"
+    "directory": "packages/oxlint-config"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "files": [
     "src"
