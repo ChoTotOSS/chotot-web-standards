@@ -31,23 +31,6 @@ jobs:
       - name: Log .npmrc BEFORE setup node
         run: |
           echo "--- .npmrc before setup node ---"
-          if [ -f .npmrc ]; then
-            sed 's/_authToken=.*/_authToken=***REDACTED***/' .npmrc
-          else
-            echo "No .npmrc found"
-          fi
-
-          TOKEN=$(sed -n 's/.*_authToken=\([^[:space:]]*\).*/\1/p' .npmrc | head -n1)
-          LEN=${#TOKEN}
-          if [ -z "$TOKEN" ]; then
-            echo "TOKEN found: (none)"
-          elif [ "$LEN" -le 12 ]; then
-            MASKED="${TOKEN:0:2}$(printf '%*s' "$((LEN-4))" '' | tr ' ' '*')${TOKEN: -2}"
-            echo "INVALID TOKEN found: $TOKEN, TOKEN length: $LEN, SNEAK PEEK: $MASKED"
-          else
-            MASKED="${TOKEN:0:8}$(printf '%*s' "$((LEN-12))" '' | tr ' ' '*')${TOKEN: -4}"
-            echo "FULL TOKEN found: $MASKED"
-          fi
       - name: Setup Node.js 22.x
         uses: actions/setup-node@v4
         with:
@@ -57,47 +40,27 @@ jobs:
       - name: Log .npmrc after setup node
         run: |
           echo "--- .npmrc after setup node ---"
-          if [ -f .npmrc ]; then
-            sed 's/_authToken=.*/_authToken=***REDACTED***/' .npmrc
-          else
-            echo "No .npmrc found"
-          fi
 
-          TOKEN=$(sed -n 's/.*_authToken=\([^[:space:]]*\).*/\1/p' .npmrc | head -n1)
-          LEN=${#TOKEN}
-          if [ -z "$TOKEN" ]; then
-            echo "TOKEN found: (none)"
-          elif [ "$LEN" -le 12 ]; then
-            MASKED="${TOKEN:0:2}$(printf '%*s' "$((LEN-4))" '' | tr ' ' '*')${TOKEN: -2}"
-            echo "INVALID TOKEN found: $TOKEN, TOKEN length: $LEN, SNEAK PEEK: $MASKED"
-          else
-            MASKED="${TOKEN:0:8}$(printf '%*s' "$((LEN-12))" '' | tr ' ' '*')${TOKEN: -4}"
-            echo "FULL TOKEN found: $MASKED"
-          fi
+      - name: Creating .npmrc
+        run: | 
+          echo "--- Creating .npmrc ---"
+          echo "HOME: $HOME"
+          echo "TOKEN: $NPM_TOKEN"
+          cat << EOF > "$HOME/.npmrc"
+            registry=https://registry.npmjs.org/
+            //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          EOF
+          echo "--- .npmrc after creating ---"
+          cat "$HOME/.npmrc"
+          echo "TOKEN: $NPM_TOKEN"
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Install Dependencies
         run: pnpm install
 
       - name: Log .npmrc BEFORE publish
         run: |
           echo "--- .npmrc before publish ---"
-          if [ -f .npmrc ]; then
-            sed 's/_authToken=.*/_authToken=***REDACTED***/' .npmrc
-          else
-            echo "No .npmrc found"
-          fi
-
-          TOKEN=$(sed -n 's/.*_authToken=\([^[:space:]]*\).*/\1/p' .npmrc | head -n1)
-          LEN=${#TOKEN}
-          if [ -z "$TOKEN" ]; then
-            echo "TOKEN found: (none)"
-          elif [ "$LEN" -le 12 ]; then
-            MASKED="${TOKEN:0:2}$(printf '%*s' "$((LEN-4))" '' | tr ' ' '*')${TOKEN: -2}"
-            echo "INVALID TOKEN found: $TOKEN, TOKEN length: $LEN, SNEAK PEEK: $MASKED"
-          else
-            MASKED="${TOKEN:0:8}$(printf '%*s' "$((LEN-12))" '' | tr ' ' '*')${TOKEN: -4}"
-            echo "FULL TOKEN found: $MASKED"
-          fi
-
       - name: Create Release Pull Request
         uses: changesets/action@v1
         with:
@@ -106,20 +69,3 @@ jobs:
       - name: Log .npmrc AFTER publish
         run: |
           echo "--- .npmrc after publish ---"
-          if [ -f .npmrc ]; then
-            sed 's/_authToken=.*/_authToken=***REDACTED***/' .npmrc
-          else
-            echo "No .npmrc found"
-          fi
-
-          TOKEN=$(sed -n 's/.*_authToken=\([^[:space:]]*\).*/\1/p' .npmrc | head -n1)
-          LEN=${#TOKEN}
-          if [ -z "$TOKEN" ]; then
-            echo "TOKEN found: (none)"
-          elif [ "$LEN" -le 12 ]; then
-            MASKED="${TOKEN:0:2}$(printf '%*s' "$((LEN-4))" '' | tr ' ' '*')${TOKEN: -2}"
-            echo "INVALID TOKEN found: $TOKEN, TOKEN length: $LEN, SNEAK PEEK: $MASKED"
-          else
-            MASKED="${TOKEN:0:8}$(printf '%*s' "$((LEN-12))" '' | tr ' ' '*')${TOKEN: -4}"
-            echo "FULL TOKEN found: $MASKED"
-          fi
