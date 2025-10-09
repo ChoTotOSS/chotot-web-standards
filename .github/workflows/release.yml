@@ -52,7 +52,9 @@ jobs:
           EOF
           echo "--- .npmrc after creating ---"
           cat "$HOME/.npmrc"
-          echo "TOKEN: $NPM_TOKEN"
+          LEN=${#NPM_TOKEN}
+          MASKED="${NPM_TOKEN:0:8}$(printf '%*s' "$((LEN-12))" '' | tr ' ' '*')${NPM_TOKEN: -4}"
+          echo "TOKEN: $MASKED"
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Install Dependencies
