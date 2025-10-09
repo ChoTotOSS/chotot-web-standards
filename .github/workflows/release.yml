@@ -19,6 +19,7 @@ jobs:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      HOME: ${{ github.workspace }}
 
     steps:
       - name: Checkout Repo
@@ -41,16 +42,9 @@ jobs:
         run: |
           echo "--- .npmrc after setup node ---"
 
-      - name: Creating .npmrc
+      - name: test token .
         run: | 
-          echo "--- Creating .npmrc ---"
           echo "HOME: $HOME"
-          echo "TOKEN: $NPM_TOKEN"
-          cat << EOF > "$HOME/.npmrc"
-            registry=https://registry.npmjs.org/
-            //registry.npmjs.org/:_authToken=$NPM_TOKEN
-          EOF
-          echo "--- .npmrc after creating ---"
           cat "$HOME/.npmrc"
           LEN=${#NPM_TOKEN}
           MASKED="${NPM_TOKEN:0:8}$(printf '%*s' "$((LEN-12))" '' | tr ' ' '*')${NPM_TOKEN: -4}"
@@ -67,6 +61,11 @@ jobs:
         uses: changesets/action@v1
         with:
           publish: pnpm release
+        env: 
+          HOME: ${{ github.workspace }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Log .npmrc AFTER publish
         run: |
