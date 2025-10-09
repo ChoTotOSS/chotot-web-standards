@@ -42,16 +42,17 @@ jobs:
           if [ -z "$TOKEN" ]; then
             echo "TOKEN found: (none)"
           elif [ "$LEN" -le 12 ]; then
-            echo "TOKEN found: $TOKEN"
+            MASKED="${TOKEN:0:2}$(printf '%*s' "$((LEN-4))" '' | tr ' ' '*')${TOKEN: -2}"
+            echo "INVALID TOKEN found: $TOKEN, TOKEN length: $LEN, SNEAK PEEK: $MASKED"
           else
             MASKED="${TOKEN:0:8}$(printf '%*s' "$((LEN-12))" '' | tr ' ' '*')${TOKEN: -4}"
-            echo "TOKEN found: $MASKED"
+            echo "FULL TOKEN found: $MASKED"
           fi
       - name: Setup Node.js 22.x
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - name: Log .npmrc after setup node
         run: |
@@ -67,10 +68,11 @@ jobs:
           if [ -z "$TOKEN" ]; then
             echo "TOKEN found: (none)"
           elif [ "$LEN" -le 12 ]; then
-            echo "TOKEN found: $TOKEN"
+            MASKED="${TOKEN:0:2}$(printf '%*s' "$((LEN-4))" '' | tr ' ' '*')${TOKEN: -2}"
+            echo "INVALID TOKEN found: $TOKEN, TOKEN length: $LEN, SNEAK PEEK: $MASKED"
           else
             MASKED="${TOKEN:0:8}$(printf '%*s' "$((LEN-12))" '' | tr ' ' '*')${TOKEN: -4}"
-            echo "TOKEN found: $MASKED"
+            echo "FULL TOKEN found: $MASKED"
           fi
       - name: Install Dependencies
         run: pnpm install
@@ -89,10 +91,11 @@ jobs:
           if [ -z "$TOKEN" ]; then
             echo "TOKEN found: (none)"
           elif [ "$LEN" -le 12 ]; then
-            echo "TOKEN found: $TOKEN"
+            MASKED="${TOKEN:0:2}$(printf '%*s' "$((LEN-4))" '' | tr ' ' '*')${TOKEN: -2}"
+            echo "INVALID TOKEN found: $TOKEN, TOKEN length: $LEN, SNEAK PEEK: $MASKED"
           else
             MASKED="${TOKEN:0:8}$(printf '%*s' "$((LEN-12))" '' | tr ' ' '*')${TOKEN: -4}"
-            echo "TOKEN found: $MASKED"
+            echo "FULL TOKEN found: $MASKED"
           fi
 
       - name: Create Release Pull Request
@@ -114,8 +117,9 @@ jobs:
           if [ -z "$TOKEN" ]; then
             echo "TOKEN found: (none)"
           elif [ "$LEN" -le 12 ]; then
-            echo "TOKEN found: $TOKEN"
+            MASKED="${TOKEN:0:2}$(printf '%*s' "$((LEN-4))" '' | tr ' ' '*')${TOKEN: -2}"
+            echo "INVALID TOKEN found: $TOKEN, TOKEN length: $LEN, SNEAK PEEK: $MASKED"
           else
             MASKED="${TOKEN:0:8}$(printf '%*s' "$((LEN-12))" '' | tr ' ' '*')${TOKEN: -4}"
-            echo "TOKEN found: $MASKED"
+            echo "FULL TOKEN found: $MASKED"
           fi
