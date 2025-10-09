@@ -60,7 +60,6 @@ jobs:
         with:
           publish: pnpm release
 
-      # 👇 Logs after publish
       - name: Log .npmrc AFTER publish
         run: |
           echo "--- .npmrc after publish ---"
