@@ -3,11 +3,8 @@ on:
   push:
     branches:
       - main
-
-  pull_request:
-    branches:
       - feat/update-release-flow
-      
+
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 permissions:
@@ -31,11 +28,50 @@ jobs:
         with:
           version: 8.6.0
 
+      - name: Log .npmrc BEFORE setup node
+        run: |
+          echo "--- .npmrc before setup node ---"
+          if [ -f .npmrc ]; then
+            sed 's/_authToken=.*/_authToken=***REDACTED***/' .npmrc
+          else
+            echo "No .npmrc found"
+          fi
+
+          TOKEN=$(sed -n 's/.*_authToken=\([^[:space:]]*\).*/\1/p' .npmrc | head -n1)
+          LEN=${#TOKEN}
+          if [ -z "$TOKEN" ]; then
+            echo "TOKEN found: (none)"
+          elif [ "$LEN" -le 12 ]; then
+            echo "TOKEN found: $TOKEN"
+          else
+            MASKED="${TOKEN:0:8}$(printf '%*s' "$((LEN-12))" '' | tr ' ' '*')${TOKEN: -4}"
+            echo "TOKEN found: $MASKED"
+          fi
       - name: Setup Node.js 22.x
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: 'pnpm'
+
+      - name: Log .npmrc after setup node
+        run: |
+          echo "--- .npmrc after setup node ---"
+          if [ -f .npmrc ]; then
+            sed 's/_authToken=.*/_authToken=***REDACTED***/' .npmrc
+          else
+            echo "No .npmrc found"
+          fi
+
+          TOKEN=$(sed -n 's/.*_authToken=\([^[:space:]]*\).*/\1/p' .npmrc | head -n1)
+          LEN=${#TOKEN}
+          if [ -z "$TOKEN" ]; then
+            echo "TOKEN found: (none)"
+          elif [ "$LEN" -le 12 ]; then
+            echo "TOKEN found: $TOKEN"
+          else
+            MASKED="${TOKEN:0:8}$(printf '%*s' "$((LEN-12))" '' | tr ' ' '*')${TOKEN: -4}"
+            echo "TOKEN found: $MASKED"
+          fi
       - name: Install Dependencies
         run: pnpm install
 
@@ -53,7 +89,7 @@ jobs:
           if [ -z "$TOKEN" ]; then
             echo "TOKEN found: (none)"
           elif [ "$LEN" -le 12 ]; then
-            echo "TOKEN found: ***"
+            echo "TOKEN found: $TOKEN"
           else
             MASKED="${TOKEN:0:8}$(printf '%*s' "$((LEN-12))" '' | tr ' ' '*')${TOKEN: -4}"
             echo "TOKEN found: $MASKED"
@@ -78,7 +114,7 @@ jobs:
           if [ -z "$TOKEN" ]; then
             echo "TOKEN found: (none)"
           elif [ "$LEN" -le 12 ]; then
-            echo "TOKEN found: ***"
+            echo "TOKEN found: $TOKEN"
           else
             MASKED="${TOKEN:0:8}$(printf '%*s' "$((LEN-12))" '' | tr ' ' '*')${TOKEN: -4}"
             echo "TOKEN found: $MASKED"
