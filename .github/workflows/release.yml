@@ -3,7 +3,11 @@ on:
   push:
     branches:
       - main
-      - test-ci
+
+  pull_request:
+    branches:
+      - feat/update-release-flow
+      
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 permissions:
