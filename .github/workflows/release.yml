@@ -28,11 +28,6 @@ jobs:
         with:
           node-version: 22
           cache: 'pnpm'
-      - name: Creating .npmrc
-        run: |
-          cat << EOF > "$HOME/.npmrc"
-            //registry.npmjs.org/:_authToken=$NPM_TOKEN
-          EOF
       - name: Install Dependencies
         run: pnpm install
       - name: Create Release Pull Request
