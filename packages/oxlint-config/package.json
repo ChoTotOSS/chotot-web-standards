@@ -25,6 +25,7 @@
     }
   },
   "dependencies": {
-    "oxlint": "^1.13.0"
+    "oxlint": "^1.13.0",
+    "@chotot/eslint-plugin-chotot": "workspace:*"
   }
 }

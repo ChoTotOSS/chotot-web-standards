@@ -102,6 +102,9 @@ importers:
 
   packages/oxlint-config:
     dependencies:
+      '@chotot/eslint-plugin-chotot':
+        specifier: workspace:*
+        version: link:../eslint-plugin-chotot
       oxlint:
         specifier: ^1.13.0
         version: 1.19.0
