@@ -6,7 +6,7 @@ import {
   computeFilepathParts,
 } from './helper.js';
 
-export = {
+export default {
   meta: {
     type: 'suggestion',
     docs: { description: 'Avoid ad-block prone filepaths.' },

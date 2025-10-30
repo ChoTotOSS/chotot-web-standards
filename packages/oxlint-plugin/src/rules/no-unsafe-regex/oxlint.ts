@@ -1,10 +1,10 @@
-import { newExpressionSelector } from '../../selectors/call-or-new-expression-selector.js';
-import { isNewExpression } from '../../ats/is-new-expression.js';
+import { newExpressionSelector } from '../selectors/call-or-new-expression-selector.js';
+import { isNewExpression } from '../utils/ats/is-new-expression.js';
 import { MESSAGE_ID, messages, isUnsafeLiteral, isUnsafePattern } from './helper.js';
 
 const newRegExpSelector = [newExpressionSelector('RegExp'), '[arguments.0.type="Literal"]'].join('');
 
-export = {
+export default {
   meta: { type: 'problem', docs: { description: 'Disallow unsafe regular expressions.' }, messages },
   createOnce(context) {
     return {

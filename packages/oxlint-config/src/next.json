@@ -21,7 +21,7 @@
         "es6": true
     },
     "jsPlugins": [
-        "@chotot/oxlint-config/src/oxlint-plugin-chotot.mjs"
+        "@chotot/oxlint-plugin"
     ],
     "rules": {
         "ban-ts-comment": "error",

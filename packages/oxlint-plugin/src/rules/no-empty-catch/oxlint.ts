@@ -1,6 +1,6 @@
 import { MESSAGE_ID, messages, isEmptyCatchBody } from './helper.js';
 
-export = {
+export default {
   meta: { messages },
   createOnce(context) {
     return {

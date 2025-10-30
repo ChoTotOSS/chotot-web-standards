@@ -1,5 +1,5 @@
 import * as path from 'path';
-import adWords from '../../../utils/ad-words';
+import adWords from '../utils/ad-words.js';
 
 export const MESSAGE_ID = 'filepath-no-ads';
 
