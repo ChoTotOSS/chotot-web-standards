@@ -1,5 +1,11 @@
 # @chotot/eslint-plugin-chotot
 
+## 1.1.1
+
+### Patch Changes
+
+- 6cdd0d7: port oxlint
+
 ## 1.1.0
 
 ### Minor Changes

@@ -1,6 +1,6 @@
 {
   "name": "@chotot/oxlint-plugin",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "ChoTot Oxlint plugin (ESM)",
   "type": "module",
   "main": "dist/index.js",
@@ -30,5 +30,3 @@
     "build": "tsup"
   }
 }
-
-
