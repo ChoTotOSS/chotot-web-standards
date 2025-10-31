@@ -1,5 +1,12 @@
 # @chotot/eslint-config-next
 
+## 1.5.3
+
+### Patch Changes
+
+- Updated dependencies [6cdd0d7]
+  - @chotot/eslint-plugin-chotot@1.1.1
+
 ## 1.5.2
 
 ### Patch Changes
