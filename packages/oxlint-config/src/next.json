@@ -4,7 +4,8 @@
         "import",
         "unicorn",
         "nextjs",
-        "jsx-a11y"
+        "jsx-a11y",
+        "import"
     ],
     "ignorePatterns": [
         "node_modules/*",
@@ -190,7 +191,25 @@
         "react/void-dom-elements-no-children": "error",
         "react/rules-of-hooks": "error",
         "react/exhaustive-deps": "warn",
-        
+
+
+        "import/export": "error",
+        "import/no-named-as-default": "error",
+        "import/no-named-as-default-member": "error",
+        "import/no-mutable-exports": "error",
+        "import/no-amd": "error",
+        "import/first": "error",
+        "import/no-duplicates": "error",
+        "import/no-absolute-path": "error",
+        "import/no-dynamic-require": "error",
+        "import/no-webpack-loader-syntax": "error",
+        "import/no-named-default": "error",
+        "import/no-self-import": "error",
+        "import/no-cycle": "off",
+        "import/no-anonymous-default-export": "error",
+        "import/default": "error",
+
+
         "oxlint-plugin-chotot/filepath-no-ads": "error",
         "oxlint-plugin-chotot/no-empty-catch": "error"
     }
