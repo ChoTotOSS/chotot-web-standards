@@ -1,5 +1,11 @@
 # @chotot/oxlint-config
 
+## 0.1.1
+
+### Patch Changes
+
+- eb00b11: update rules
+
 ## 0.1.0
 
 ### Minor Changes
